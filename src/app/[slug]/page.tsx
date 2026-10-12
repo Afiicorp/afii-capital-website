@@ -1,3 +1,4 @@
+﻿import { Suspense } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
@@ -34,15 +35,6 @@ const pages: Record<string, PageContent> = {
       { heading: "Explore eligibility", body: "Contact AFII with an outline of the project, the proposed equipment, exporting country, supplier and project sponsor." }
     ], cta: "Discuss export credit financing"
   },
-  "trade-finance": {
-    title: "Trade", accent: "finance.", kicker: "TRADE, RECEIVABLES & WORKING CAPITAL",
-    intro: "Structured financing perspectives designed around trade flows, receivables and the commercial requirements of businesses.", image: "/images/hero-finance.jpg",
-    sections: [
-      { heading: "Structure around commercial flows", body: "Trade and working-capital requirements vary with counterparties, payment cycles, receivables quality and the underlying business model. AFII's work includes structured finance approaches and trade receivables securitisation.", bullets: ["Trade receivables and cash-flow analysis", "Securitisation and off-balance-sheet structures, where appropriate", "Liquidity and capital structure considerations", "Cross-border transaction coordination"] },
-      { heading: "A transaction-specific approach", body: "A suitable structure depends on legal enforceability, obligor quality, concentration, currency, jurisdiction and the availability of reliable transaction data." },
-      { heading: "Discuss a mandate", body: "For an initial conversation, share the business model, transaction flow, counterparties, receivables profile and the outcome you are seeking." }
-    ], cta: "Discuss trade finance"
-  },
   "equity": {
     title: "Equity &", accent: "structuring.", kicker: "CAPITALISATION & INVESTOR STRUCTURES",
     intro: "Transaction structuring and financial modelling to help projects assess capital availability, investor participation and possible funding pathways.", image: "/images/hero-finance.jpg",
@@ -65,7 +57,7 @@ const pages: Record<string, PageContent> = {
     sections: [
       { heading: "Aviation", body: "Aircraft acquisition finance, airport project finance or refinancing, and maintenance, repair and overhaul (MRO) project requirements." },
       { heading: "Infrastructure & energy", body: "Energy project finance and refinancing, including renewable, hydro and fossil energy; railway projects and equipment such as station redevelopment, rolling stock and capital expenditure; roads, highways and ports." },
-      { heading: "Commodities & industry", body: "Trade receivables securitisation and financing perspectives for industrial and commercial requirements. AFII's wider published experience includes water, healthcare, industrial assets and financial services." }
+      { heading: "Commodities & industry", body: "Receivables securitisation and financing perspectives for industrial and commercial requirements. AFII's wider published experience includes water, healthcare, industrial assets and financial services." }
     ], cta: "Talk to our team"
   },
   "transactions": {
@@ -107,7 +99,7 @@ const pages: Record<string, PageContent> = {
   },
   "about-afii": {
     title: "AFII Capital", accent: "Partners.", kicker: "ABOUT AFII",
-    intro: "Structured project and trade finance solutions across infrastructure, industrial, financial services and agribusiness sectors.", image: "/images/hero-building-alt.jpg",
+    intro: "Structured project finance solutions across infrastructure, industrial, financial services and agribusiness sectors.", image: "/images/hero-building-alt.jpg",
     sections: [
       { heading: "Advisory built on experience", body: "Building on the legacy of AFII Corp, which has delivered corporate advisory services for over two decades, AFII Capital Partners brings financial structuring and cross-border execution perspectives to complex mandates." },
       { heading: "Core areas of work", body: "AFII's published offerings include export credit agency-backed project and equipment financing, securitised and off-balance-sheet instruments, government borrowing and public funding solutions, REIT and asset trust structures, and dry-lease and wet-lease financing for marine, industrial and aviation applications." },
@@ -154,16 +146,25 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
     title,
     description,
     alternates: { canonical },
-    openGraph: { title: `${title} | AFII Capital Partners`, description, url: `https://afiicapital.com${canonical}`, siteName: "AFII Capital Partners", type: "website", images: [{ url: page.image, width: 1600, height: 900, alt: `${title} — AFII Capital Partners` }] },
+    openGraph: { title: `${title} | AFII Capital Partners`, description, url: `https://afiicapital.com${canonical}`, siteName: "AFII Capital Partners", type: "website", images: [{ url: page.image, width: 1600, height: 900, alt: `${title} â€” AFII Capital Partners` }] },
     twitter: { card: "summary_large_image", title: `${title} | AFII Capital Partners`, description, images: [page.image] },
   };
 }
 
-export default async function ContentPage({ params }: { params: Promise<{ slug: string }> }) {
+export default function ContentPage({ params }: { params: Promise<{ slug: string }> }) {
+  return (
+    <Suspense fallback={<main className="page-shell"><div className="content-wrap"><p>Loading page…</p></div></main>}>
+      <ContentPageContent params={params} />
+    </Suspense>
+  );
+}
+
+async function ContentPageContent({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const page = pages[slug];
   if (!page) notFound();
   const isTransactions = slug === "transactions";
   return <main><SiteHeader /><section className="page-hero"><div className="page-hero-image"><Image src={page.image} alt="" fill priority sizes="100vw" /></div><div className="page-hero-shade" /><div className="container page-hero-content"><div className="eyebrow eyebrow-light"><span />{page.kicker}</div><h1>{page.title}<br /><em>{page.accent}</em></h1><p>{page.intro}</p><div className="breadcrumb"><Link href="/">Home</Link><span>/</span><span>{page.kicker}</span></div></div></section>
-    <section className="content-main section-pad"><div className="container content-layout"><aside className="content-sidebar"><span className="sidebar-label">EXPLORE AFII</span><Link href="/project-finance">Project finance</Link><Link href="/equipment-finance">Equipment finance</Link><Link href="/eca-financing">Export credit financing</Link><Link href="/trade-finance">Trade finance</Link><Link href="/sectors">Industries &amp; sectors</Link><Link href="/transactions">Transactions</Link><Link href="/investments">Investments</Link><Link href="/contact">Contact</Link></aside><div className="content-article">{page.sections.map((section, i) => <section className="content-section" key={section.heading}><div className="content-section-number">{String(i + 1).padStart(2, "0")}</div><div><h2>{section.heading}</h2><p>{section.body}</p>{section.bullets && <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>}{isTransactions && i === 1 && <div className="transaction-table-wrap"><table className="transaction-table"><thead><tr><th>Area</th><th>Published example</th><th>Region</th></tr></thead><tbody><tr><td>Railways &amp; metro</td><td>Station redevelopment and rail infrastructure projects</td><td>India / Europe</td></tr><tr><td>Roads &amp; highways</td><td>Ring road projects and infrastructure joint ventures</td><td>India</td></tr><tr><td>Water</td><td>Water supply, desalination and wastewater treatment</td><td>India / Israel / international</td></tr><tr><td>Renewable energy</td><td>Solar, wind and refinancing-related projects</td><td>Europe / Asia</td></tr><tr><td>Aviation &amp; healthcare</td><td>Aircraft and medical-equipment leasing references</td><td>India / Europe</td></tr></tbody></table><p className="table-note">This is a thematic summary of published references, not an exhaustive transaction list. Some details are confidential or not specified.</p></div>}</div></section>)}<div className="content-callout"><div className="eyebrow"><span /> NEXT STEP</div><h2>{page.cta ?? "Talk to AFII"}</h2><p>Share a short outline of your project or enquiry and the team can direct it to the appropriate specialist.</p><a className="button button-dark" href={`mailto:${slug === "investments" ? "invest@afii.eu" : slug === "vdr" ? "deals@afiicapital.com" : "reachus@afiicapital.com"}?subject=${encodeURIComponent(page.cta ?? "AFII Capital enquiry")}`}>Contact AFII <span>↗</span></a></div></div></div></section><SiteFooter /></main>;
+    <section className="content-main section-pad"><div className="container content-layout"><aside className="content-sidebar"><span className="sidebar-label">EXPLORE AFII</span><Link href="/project-finance">Project finance</Link><Link href="/equipment-finance">Equipment finance</Link><Link href="/eca-financing">Export credit financing</Link><Link href="/sectors">Industries &amp; sectors</Link><Link href="/transactions">Transactions</Link><Link href="/investments">Investments</Link><Link href="/contact">Contact</Link></aside><div className="content-article">{page.sections.map((section, i) => <section className="content-section" key={section.heading}><div className="content-section-number">{String(i + 1).padStart(2, "0")}</div><div><h2>{section.heading}</h2><p>{section.body}</p>{section.bullets && <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>}{isTransactions && i === 1 && <div className="transaction-table-wrap"><table className="transaction-table"><thead><tr><th>Area</th><th>Published example</th><th>Region</th></tr></thead><tbody><tr><td>Railways &amp; metro</td><td>Station redevelopment and rail infrastructure projects</td><td>India / Europe</td></tr><tr><td>Roads &amp; highways</td><td>Ring road projects and infrastructure joint ventures</td><td>India</td></tr><tr><td>Water</td><td>Water supply, desalination and wastewater treatment</td><td>India / Israel / international</td></tr><tr><td>Renewable energy</td><td>Solar, wind and refinancing-related projects</td><td>Europe / Asia</td></tr><tr><td>Aviation &amp; healthcare</td><td>Aircraft and medical-equipment leasing references</td><td>India / Europe</td></tr></tbody></table><p className="table-note">This is a thematic summary of published references, not an exhaustive transaction list. Some details are confidential or not specified.</p></div>}</div></section>)}<div className="content-callout"><div className="eyebrow"><span /> NEXT STEP</div><h2>{page.cta ?? "Talk to AFII"}</h2><p>Share a short outline of your project or enquiry and the team can direct it to the appropriate specialist.</p><a className="button button-dark" href={`mailto:${slug === "investments" ? "invest@afii.eu" : slug === "vdr" ? "deals@afiicapital.com" : "reachus@afiicapital.com"}?subject=${encodeURIComponent(page.cta ?? "AFII Capital enquiry")}`}>Contact AFII <span>â†—</span></a></div></div></div></section><SiteFooter /></main>;
 }
+

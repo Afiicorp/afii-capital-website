@@ -8,7 +8,6 @@ const expertiseLinks = [
   ["Project finance", "/project-finance"],
   ["Equipment finance", "/equipment-finance"],
   ["Export credit financing", "/eca-financing"],
-  ["Trade finance", "/trade-finance"],
   ["Equity & structuring", "/equity"],
   ["Aviation finance", "/aviation-business"],
 ];
@@ -17,6 +16,7 @@ const aboutLinks = [
   ["Leadership", "/team"],
   ["Group network", "/group"],
   ["Investments", "/investments"],
+  ["Offices", "/offices"],
   ["Trust & governance", "/trust"],
   ["Virtual data room", "/vdr"],
   ["Contact", "/contact"],
@@ -52,9 +52,10 @@ export function SiteHeader() {
             </div>
             <Link href="/sectors" onClick={close}>Sectors</Link>
             <Link href="/transactions" onClick={close}>Transactions</Link>
+            <Link href="/offices" onClick={close}>Offices</Link>
             <div className={`nav-group ${aboutOpen ? "is-expanded" : ""}`}>
               <div className="nav-group-top"><Link href="/about-afii" onClick={close}>About AFII</Link><button className="nav-disclosure" type="button" aria-label="Toggle About AFII menu" aria-expanded={aboutOpen} onClick={() => setAboutOpen(!aboutOpen)}>⌄</button><span className="nav-caret" aria-hidden="true">⌄</span></div>
-              <div className="nav-dropdown nav-dropdown-right">{aboutLinks.map(([label, href]) => <Link href={href} key={href} onClick={close}>{label}</Link>)}</div>
+              <div className="nav-dropdown nav-dropdown-about">{aboutLinks.map(([label, href]) => <Link href={href} key={href} onClick={close}>{label}</Link>)}</div>
             </div>
             <Link className="nav-cta" href="/contact" onClick={close}>Discuss a mandate <span>↗</span></Link>
           </nav>
@@ -74,7 +75,7 @@ export function SiteFooter() {
         </Link>
         <p>Structured Finance &amp;<br />Infrastructure Investments</p>
         <div className="footer-links">
-          <Link href="/project-finance">Project finance</Link><Link href="/equipment-finance">Equipment finance</Link><Link href="/sectors">Sectors</Link><Link href="/transactions">Transactions</Link><Link href="/investments">Investments</Link><Link href="/team">Leadership</Link><Link href="/group">Group network</Link><Link href="/contact">Contact</Link>
+          <Link href="/project-finance">Project finance</Link><Link href="/equipment-finance">Equipment finance</Link><Link href="/eca-financing">Export credit financing</Link><Link href="/sectors">Sectors</Link><Link href="/transactions">Transactions</Link><Link href="/investments">Investments</Link><Link href="/offices">Offices</Link><Link href="/team">Leadership</Link><Link href="/group">Group network</Link><Link href="/contact">Contact</Link>
         </div>
         <a className="footer-email" href="mailto:reachus@afiicapital.com">reachus@afiicapital.com <span>↗</span></a>
       </div>
