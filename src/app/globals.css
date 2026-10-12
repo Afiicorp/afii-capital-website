@@ -479,3 +479,69 @@ footer li {
     font-size: 15px;
   }
 }
+
+/* AFII PATCH 13 FIXED: restrained nav, readable sidebar, restore premium dark footer */
+.site-header nav a,
+.site-header nav button,
+.site-nav a,
+.site-nav button,
+header nav a,
+header nav button {
+  font-weight: 500 !important;
+}
+
+.site-header nav a:hover,
+.site-header nav button:hover,
+.site-nav a:hover,
+.site-nav button:hover,
+header nav a:hover,
+header nav button:hover {
+  font-weight: 600 !important;
+}
+
+.sidebar a,
+.page-sidebar a,
+.explore-sidebar a,
+aside a {
+  color: #26364b !important;
+  font-size: 1.01rem !important;
+  font-weight: 500 !important;
+}
+
+.site-footer,
+footer.site-footer,
+footer[role="contentinfo"] {
+  background: #08111f !important;
+  color: #f4f6fa !important;
+  border-top-color: #182538 !important;
+}
+
+.site-footer a,
+footer.site-footer a,
+footer[role="contentinfo"] a {
+  color: #e0bd76 !important;
+  font-weight: 500 !important;
+}
+
+.site-footer p,
+.site-footer li,
+.site-footer span,
+footer.site-footer p,
+footer.site-footer li,
+footer.site-footer span {
+  color: #d4dbe5;
+}
+
+.site-footer .brand-name,
+.site-footer .brand-subtitle,
+.site-footer strong {
+  color: #ffffff !important;
+}
+
+html,
+body,
+main,
+.page-shell {
+  background-color: #ffffff;
+}
+/* End AFII PATCH 13 FIXED */
