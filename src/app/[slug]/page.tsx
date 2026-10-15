@@ -23,7 +23,6 @@ const pages: Record<string, PageContent> = {
     intro: "Financing approaches for capital equipment across industrial sectors, infrastructure, energy, aviation and marine applications.", image: "/images/equipment-finance-feature.jpg",
     sections: [
       { heading: "Financing capital equipment", body: "AFII describes financing models that can include wet-lease and dry-lease structures, arranged around the asset, transaction size, operating context and the project's commercial requirements.", bullets: ["Renewable energy and power equipment", "Industrial machinery and manufacturing assets", "Aircraft and marine equipment", "Oil and gas, pulp and paper, material handling, steel, mining and telecom assets"] },
-      { heading: "Export credit-supported structures", body: "For eligible capital goods imports, export credit support may help align financing with project lifecycle and procurement needs. Eligibility, terms, local-content requirements and risk allocation depend on the specific transaction." },
       { heading: "Start a conversation", body: "Share the equipment type, supplier country, import content, project sponsor and approximate financing requirement to begin a discussion." }
     ], cta: "Discuss equipment finance"
   },
@@ -38,11 +37,38 @@ const pages: Record<string, PageContent> = {
   },
   "equity": {
     title: "Equity &", accent: "structuring.", kicker: "CAPITALISATION & INVESTOR STRUCTURES",
-    intro: "Transaction structuring and financial modelling to help projects assess capital availability, investor participation and possible funding pathways.", image: "/images/equity-structuring-feature.jpg",
+    intro: "Building on AFII Corp's experience in the Indian market, AFII Capital applies transaction structuring and financial modelling to assess capital availability and investor participation.", image: "/images/equity-structuring-feature.jpg",
     sections: [
-      { heading: "Capital availability and structure", body: "AFII's published approach builds on transaction structuring and financial modelling, with the aim of assessing the capital requirements of projects and the possible roles of different funding sources.", bullets: ["Capital structure and leverage optimisation", "Investor participation and project-level funding pools", "Infrastructure, transportation and renewables", "Alternative market and listing-structure considerations where appropriate"] },
+      { heading: "Capital availability and structure", body: "AFII brings transaction-structuring and financial-modelling expertise to help assess project capital requirements and the role of potential investors. The objective is to develop a suitable capital structure while considering the interests and expected returns of participating investors.", bullets: ["Optimising leverage at different levels of a business structure", "Collective investment pools for infrastructure, transportation and renewables", "Investor participation and project-level funding structures", "Alternative investment market and listing-structure considerations where appropriate"] },
       { heading: "Project-specific assessment", body: "Equity and financing outcomes depend on the project's fundamentals, governance, valuation, risk allocation and investor requirements. No investment offer or outcome is implied by this overview." }
     ], cta: "Discuss capital structuring"
+  },
+  "securitizations": {
+    title: "Securitization", accent: "advisory.", kicker: "STRUCTURED FINANCE",
+    intro: "Structuring and placement of financing backed by future cash flows, with careful assessment of the underlying asset, revenue profile and risk allocation.", image: "/images/city-infrastructure.jpg",
+    sections: [
+      { heading: "Turning future cash flows into capital", body: "Securitization may allow an infrastructure or operating business to raise capital against eligible future cash flows. Potential contexts can include toll roads, bridges and energy assets, subject to the quality and predictability of revenues and the transaction structure." },
+      { heading: "Structuring and placement", body: "AFII can support the assessment of transaction structure, cash-flow assumptions, investor requirements and placement considerations. Due diligence is essential, including review of revenue volatility, economic conditions, regulatory exposure and operational disruption." },
+      { heading: "Discuss a structure", body: "Contact AFII with a brief description of the asset, its cash-flow history, existing financing and the capital objective." }
+    ], cta: "Discuss securitization"
+  },
+  "infrastructure-debt-refinancing": {
+    title: "Infrastructure debt", accent: "refinancing.", kicker: "STRUCTURED FINANCE",
+    intro: "Reviewing opportunities to refinance existing project debt with more efficient funding structures and a lower cost of capital where feasible.", image: "/images/project-finance-feature.jpg",
+    sections: [
+      { heading: "Refinancing existing project debt", body: "AFII advises on the structuring and placement of instruments with qualified investors to assess whether existing project debt can be refinanced with more efficient funding, potentially improving interest costs and shareholder value." },
+      { heading: "A project-specific review", body: "Any refinancing opportunity depends on current debt terms, project cash flows, lender requirements, remaining tenor, security package and market conditions. No cost saving or refinancing outcome is guaranteed." },
+      { heading: "Discuss refinancing", body: "Write to AFII with a summary of the project, existing debt structure, maturity profile and refinancing objective." }
+    ], cta: "Discuss debt refinancing"
+  },
+  "mezzanine": {
+    title: "Mezzanine", accent: "finance.", kicker: "PROJECT & STRUCTURED FINANCE",
+    intro: "A potential layer of capital between senior debt and equity for profitable projects or companies that need to support the next stage of growth.", image: "/images/equity-structuring-feature.jpg",
+    sections: [
+      { heading: "Supporting promoter equity and growth", body: "AFII's historical activities have included structuring mezzanine financing for profitable projects and companies that need additional capital to support growth, including in infrastructure, automotive, pharmaceutical, power and renewables." },
+      { heading: "A middle layer of capital", body: "Mezzanine capital can be considered where senior debt alone may not meet the requirement and immediate equity issuance may not be the preferred route. It is generally more expensive than senior debt and may be less dilutive than equity, depending on terms and risk." },
+      { heading: "Review your requirement", body: "AFII can review the business, funding need and available options on a preliminary, no-obligation basis. Any engagement is subject to agreement and due diligence." }
+    ], cta: "Discuss mezzanine finance"
   },
   "aviation-business": {
     title: "Aviation", accent: "finance.", kicker: "AIRCRAFT & AVIATION ASSETS",

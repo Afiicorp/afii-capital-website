@@ -9,6 +9,9 @@ const expertiseLinks = [
   ["Equipment finance", "/equipment-finance"],
   ["Export credit financing", "/eca-financing"],
   ["Equity & structuring", "/equity"],
+  ["Mezzanine finance", "/mezzanine"],
+  ["Securitizations", "/securitizations"],
+  ["Infrastructure debt refinancing", "/infrastructure-debt-refinancing"],
   ["Aviation finance", "/aviation-business"],
 ];
 const aboutLinks = [
