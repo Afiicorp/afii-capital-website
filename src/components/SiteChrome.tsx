@@ -85,14 +85,14 @@ export function SiteHeader() {
           <nav className={menuOpen ? "main-nav is-open" : "main-nav"} aria-label="Main navigation">
             <Link href="/#approach" onClick={close}>Our approach</Link>
             <div className={`nav-group ${expertiseOpen ? "is-expanded" : ""}`}>
-              <div className="nav-group-top" onClick={(event) => { if (isMobileMenu() && !(event.target as HTMLElement).closest("a, button")) setExpertiseOpen((value) => !value); }}><Link href="/project-finance" onClick={(event) => handleGroupLink(event, "expertise")}>Expertise</Link><button className="nav-disclosure" type="button" aria-label="Toggle expertise menu" aria-expanded={expertiseOpen} onClick={() => setExpertiseOpen(!expertiseOpen)}>⌄</button><span className="nav-caret" aria-hidden="true">⌄</span></div>
+              <div className="nav-group-top" onClick={(event) => { if (isMobileMenu() && !(event.target as HTMLElement).closest("a, button")) setExpertiseOpen((value) => !value); }}><Link href="/project-finance" onClick={(event) => handleGroupLink(event, "expertise")}>Expertise</Link></div>
               <div className="nav-dropdown">{expertiseLinks.map(([label, href]) => <Link href={href} key={href} onClick={close}>{label}</Link>)}</div>
             </div>
             <Link href="/sectors" onClick={close}>Sectors</Link>
             <Link href="/transactions" onClick={close}>Transactions</Link>
             <Link href="/offices" onClick={close}>Offices</Link>
             <div className={`nav-group ${aboutOpen ? "is-expanded" : ""}`}>
-              <div className="nav-group-top" onClick={(event) => { if (isMobileMenu() && !(event.target as HTMLElement).closest("a, button")) setAboutOpen((value) => !value); }}><Link href="/about-afii" onClick={(event) => handleGroupLink(event, "about")}>About AFII</Link><button className="nav-disclosure" type="button" aria-label="Toggle About AFII menu" aria-expanded={aboutOpen} onClick={() => setAboutOpen(!aboutOpen)}>⌄</button><span className="nav-caret" aria-hidden="true">⌄</span></div>
+              <div className="nav-group-top" onClick={(event) => { if (isMobileMenu() && !(event.target as HTMLElement).closest("a, button")) setAboutOpen((value) => !value); }}><Link href="/about-afii" onClick={(event) => handleGroupLink(event, "about")}>About AFII</Link></div>
               <div className="nav-dropdown nav-dropdown-about">{aboutLinks.map(([label, href]) => <Link href={href} key={href} onClick={close}>{label}</Link>)}</div>
             </div>
             <Link className="nav-cta" href="/contact" onClick={close}>Discuss a mandate <span>↗</span></Link>

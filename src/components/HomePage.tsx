@@ -19,10 +19,10 @@ const services = [
   { number: "04", eyebrow: "ENERGY & TRANSITION", title: "Energy and infrastructure", text: "Advisory perspectives across essential infrastructure, renewable energy and long-term asset development.", href: "/sectors", image: "/images/sectors-feature.jpg" },
 ];
 const sectors = [
-  ["01", "Aviation", "Aircraft acquisition, airport development and maintenance infrastructure."],
-  ["02", "Infrastructure", "Energy, railways, roads, ports and associated project or equipment finance."],
-  ["03", "Industry & commodities", "Industrial assets, capital goods and manufacturing projects."],
-  ["04", "Financial services", "Structured instruments, asset-backed approaches and cross-border finance."],
+  ["01", "Aviation", "Aircraft acquisition, airport development and maintenance infrastructure.", "/aviation-business"],
+  ["02", "Infrastructure", "Energy, railways, roads, ports and associated project or equipment finance.", "/project-finance"],
+  ["03", "Industry & commodities", "Industrial assets, capital goods and manufacturing projects.", "/equipment-finance"],
+  ["04", "Financial services", "Structured instruments, asset-backed approaches and cross-border finance.", "/securitizations"],
 ];
 
 export default function Home() {
@@ -91,7 +91,7 @@ export default function Home() {
 
       <section className="expertise section-pad" id="expertise"><div className="container"><div className="section-heading"><div><div className="eyebrow"><span></span> WHAT WE DO</div><h2>Finance with <em>purpose.</em></h2></div><p>Advisory and financing capabilities shaped around the needs of projects, businesses and assets.</p></div><div className="service-grid">{services.map((service) => <article className="service-card" key={service.number}><Link href={service.href} className="service-image" aria-label={`Learn more about ${service.title}`}><Image src={service.image} alt="" fill sizes="(max-width: 680px) 100vw, (max-width: 1000px) 50vw, 25vw" /><span className="image-arrow">↗</span></Link><div className="service-meta"><span>{service.number}</span><span>{service.eyebrow}</span></div><h3>{service.title}</h3><p>{service.text}</p><Link className="text-link" href={service.href}>Explore this area <span>↗</span></Link></article>)}</div></div></section>
 
-      <section className="sectors section-pad" id="sectors"><div className="container sectors-layout"><div className="sectors-heading"><div className="eyebrow eyebrow-light"><span></span> WHERE WE WORK</div><h2>Essential sectors.<br /><em>Real economies.</em></h2><p>AFII's sector experience includes transportation, energy, infrastructure and industrial assets.</p><Link className="button button-outline" href="/sectors">View sectors <span>↗</span></Link></div><div className="sector-list">{sectors.map(([number, title, text]) => <Link className="sector-item" href="/sectors" key={number}><span className="sector-number">{number}</span><div><h3>{title}</h3><p>{text}</p></div><span className="sector-arrow">↗</span></Link>)}</div></div></section>
+      <section className="sectors section-pad" id="sectors"><div className="container sectors-layout"><div className="sectors-heading"><div className="eyebrow eyebrow-light"><span></span> WHERE WE WORK</div><h2>Essential sectors.<br /><em>Real economies.</em></h2><p>AFII's sector experience includes transportation, energy, infrastructure and industrial assets.</p><Link className="button button-outline" href="/sectors">View sectors <span>↗</span></Link></div><div className="sector-list">{sectors.map(([number, title, text, href]) => <Link className="sector-item" href={href} key={number}><span className="sector-number">{number}</span><div><h3>{title}</h3><p>{text}</p></div><span className="sector-arrow">↗</span></Link>)}</div></div></section>
 
       <section className="image-story"><div className="story-image"><Image src="/images/city-infrastructure.jpg" alt="Contemporary infrastructure and commercial buildings" fill sizes="(max-width: 760px) 100vw, 55vw" /></div><div className="story-copy"><div className="eyebrow"><span></span> A CROSS-BORDER PERSPECTIVE</div><h2>Local understanding.<br /><em>International reach.</em></h2><p>AFII Capital Partners is part of an international network of independent advisory firms, with teams and partners spanning Europe, the Middle East and Asia.</p><Link className="text-link" href="/group">Explore our group <span>↗</span></Link></div></section>
 
