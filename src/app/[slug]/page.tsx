@@ -9,6 +9,17 @@ import TransactionTable from "@/components/TransactionTable";
 type PageContent = { title: string; accent: string; kicker: string; intro: string; image: string; sections: { heading: string; body: string; bullets?: string[] }[]; cta?: string };
 
 const pages: Record<string, PageContent> = {
+  "expertise": {
+    title: "Our", accent: "expertise.", kicker: "FIVE CONNECTED BUSINESS PLATFORMS",
+    intro: "AFII Capital brings together investment banking, infrastructure advisory, SME finance, asset management and principal investment perspectives. Explore each business platform and its related services below.", image: "/images/hero-architecture.jpg",
+    sections: [
+      { heading: "Investment Banking & Capital Raising", body: "Capital raising, project and structured finance, equity structuring, mezzanine capital and securitisation perspectives for sponsors and businesses.", bullets: ["Project finance", "Equity & structuring", "Mezzanine finance", "Securitizations", "Infrastructure debt refinancing"] },
+      { heading: "Government Advisory & Infrastructure Development", body: "Advisory on government engagement, infrastructure development and project-specific financing requirements.", bullets: ["Government advisory", "Project-specific finance", "Infrastructure & energy"] },
+      { heading: "SME Finance & Banking Distribution", body: "Finance origination, banking partnerships, equipment finance and export credit-supported financing for eligible capital goods imports.", bullets: ["SME finance", "Equipment finance", "Export credit financing"] },
+      { heading: "Asset Management & Investment Platforms", body: "Investment platforms and asset management perspectives across family office, renewables and related investment themes.", bullets: ["Investments", "Asset management", "Family office"] },
+      { heading: "Principal Investments", body: "Principal investment and selected aviation finance opportunities assessed on their individual commercial merits.", bullets: ["Principal investments", "Aviation finance"] }
+    ], cta: "Discuss our expertise"
+  },
   "project-finance": {
     title: "Project", accent: "finance.", kicker: "PROJECT & STRUCTURED FINANCE",
     intro: "Financial, legal and business structuring for greenfield and brownfield projects across sectors. AFII's published experience spans more than two decades of project finance advisory.", image: "/images/project-finance-feature.jpg",
@@ -23,7 +34,6 @@ const pages: Record<string, PageContent> = {
     intro: "Financing approaches for capital equipment across industrial sectors, infrastructure, energy, aviation and marine applications.", image: "/images/equipment-finance-feature.jpg",
     sections: [
       { heading: "Financing capital equipment", body: "AFII describes financing models that can include wet-lease and dry-lease structures, arranged around the asset, transaction size, operating context and the project's commercial requirements.", bullets: ["Renewable energy and power equipment", "Industrial machinery and manufacturing assets", "Aircraft and marine equipment", "Oil and gas, pulp and paper, material handling, steel, mining and telecom assets"] },
-      { heading: "Export credit-supported structures", body: "For eligible capital goods imports, export credit support may help align financing with project lifecycle and procurement needs. Eligibility, terms, local-content requirements and risk allocation depend on the specific transaction." },
       { heading: "Start a conversation", body: "Share the equipment type, supplier country, import content, project sponsor and approximate financing requirement to begin a discussion." }
     ], cta: "Discuss equipment finance"
   },
@@ -88,7 +98,9 @@ const pages: Record<string, PageContent> = {
     sections: [
       { heading: "Aviation", body: "Aircraft acquisition finance, airport project finance or refinancing, and maintenance, repair and overhaul (MRO) project requirements." },
       { heading: "Infrastructure & energy", body: "Energy project finance and refinancing, including renewable, hydro and fossil energy; railway projects and equipment such as station redevelopment, rolling stock and capital expenditure; roads, highways and ports." },
-      { heading: "Commodities & industry", body: "Receivables securitisation and financing perspectives for industrial and commercial requirements. AFII's wider published experience includes water, healthcare, industrial assets and financial services." }
+      { heading: "Commodities & industry", body: "Receivables securitisation and financing perspectives for industrial and commercial requirements. AFII's wider published experience includes water, healthcare, industrial assets and financial services." },
+      { heading: "Project-specific finance", body: "Financing perspectives tailored to project stage, cash flows, procurement, risk allocation and long-term commercial objectives." },
+      { heading: "Government & business", body: "Advisory perspectives for institutional cooperation, government-linked infrastructure and accountable project frameworks." }
     ], cta: "Talk to our team"
   },
   "transactions": {
@@ -146,6 +158,56 @@ const pages: Record<string, PageContent> = {
       { heading: "Confidential information", body: "Please do not send sensitive, confidential or personal documents in an initial email unless the AFII team has agreed a suitable method for sharing them." }
     ], cta: "Email AFII Capital"
   },
+  "sector-infrastructure-energy": {
+    title: "Infrastructure", accent: "& energy.", kicker: "SECTOR FOCUS · INFRASTRUCTURE & ENERGY",
+    intro: "Project finance and refinancing perspectives for energy, railways, roads, ports and essential infrastructure assets.", image: "/images/infrastructure-building.jpg",
+    sections: [{ heading: "Infrastructure and energy assets", body: "AFII's advisory experience spans renewable, hydro and conventional energy, railway projects and equipment, station redevelopment, rolling stock, roads, highways and ports." }, { heading: "Financing perspective", body: "The appropriate financing structure depends on project stage, cash flows, procurement, counterparties, jurisdiction and lender requirements." }], cta: "Discuss infrastructure & energy"
+  },
+  "sector-commodities-industry": {
+    title: "Commodities", accent: "& industry.", kicker: "SECTOR FOCUS · COMMODITIES & INDUSTRY",
+    intro: "Financing perspectives for industrial assets, capital goods, manufacturing and commercial receivables.", image: "/images/equipment-finance-feature.jpg",
+    sections: [{ heading: "Industrial and commercial requirements", body: "AFII's published experience includes industrial assets, capital goods, manufacturing projects and receivables-based structures. Each mandate requires assessment of the operating model, counterparties and asset or cash-flow profile." }, { heading: "Capital goods finance", body: "Equipment finance and export credit-supported structures may be relevant where eligible equipment is imported for industrial or infrastructure use." }], cta: "Discuss industry & commodities"
+  },
+  "sector-project-specific-finance": {
+    title: "Project-specific", accent: "finance.", kicker: "SECTOR FOCUS · PROJECT-SPECIFIC FINANCE",
+    intro: "Financing and advisory structures tailored to a project's stage, risk allocation, procurement and long-term commercial objectives.", image: "/images/project-finance-feature.jpg",
+    sections: [{ heading: "Start with the project", body: "Project-specific financing may bring together project finance, equipment finance, export credit, refinancing or capital structuring, depending on the requirements and eligibility of the mandate." }, { heading: "A tailored approach", body: "AFII reviews project fundamentals, sponsor capability, cash flows, counterparties and jurisdiction before considering a potential financing pathway." }], cta: "Discuss project-specific finance"
+  },
+  "sector-government-business": {
+    title: "Government", accent: "& business.", kicker: "SECTOR FOCUS · GOVERNMENT & BUSINESS",
+    intro: "Advisory perspectives for public-sector cooperation, government-linked infrastructure and institutional business initiatives.", image: "/images/governance-feature.jpg",
+    sections: [{ heading: "Government and institutional advisory", body: "AFII's published principles emphasise transparent governance, clearly defined responsibilities and accountable project frameworks for public-public cooperation and infrastructure development." }, { heading: "Business and delivery context", body: "Potential approaches depend on the relevant public institutions, procurement framework, legal environment, project scope and agreed roles of participating parties." }], cta: "Discuss government & business advisory"
+  },
+  "government-advisory": {
+    title: "Government", accent: "advisory.", kicker: "GOVERNMENT ADVISORY & INFRASTRUCTURE DEVELOPMENT",
+    intro: "Strategic integration and advisory support for institutional cooperation and infrastructure development initiatives.", image: "/images/governance-feature.jpg",
+    sections: [{ heading: "Institutional and project frameworks", body: "AFII's published approach focuses on transparent governance, clearly separated responsibilities, partner selection and accountable project frameworks. The scope of any engagement depends on the mandate and applicable agreements." }, { heading: "Discuss an initiative", body: "Share the public or institutional context, project stage, geography and intended outcome for an initial discussion." }], cta: "Discuss government advisory"
+  },
+  "sme-finance": {
+    title: "SME finance", accent: "& banking distribution.", kicker: "SME FINANCE & BANKING DISTRIBUTION",
+    intro: "Advisory perspectives on SME finance origination, banking and fintech partnerships, channel distribution and credit documentation support.", image: "/images/equipment-finance-feature.jpg",
+    sections: [{ heading: "SME financing pathways", body: "SME finance opportunities can involve partner-bank relationships, origination and distribution channels, credit packaging and documentation support, subject to lender policies and eligibility." }, { heading: "Partnership-led execution", body: "The appropriate route depends on the business profile, cash flows, sector, documentation and partner institution requirements. AFII does not guarantee credit approval." }], cta: "Discuss SME finance"
+  },
+  "asset-management": {
+    title: "Asset management", accent: "& investment platforms.", kicker: "ASSET MANAGEMENT & INVESTMENT PLATFORMS",
+    intro: "Perspectives on investment vehicles, real-asset platforms and long-term asset management opportunities.", image: "/images/investments-feature.jpg",
+    sections: [{ heading: "Investment platforms", body: "Platform opportunities may span renewable energy, logistics, warehousing, infrastructure and other real assets. Structure, governance and investment parameters are assessed case by case." }, { heading: "Mandate-specific review", body: "Any investment or asset management activity depends on the contracting entity, applicable regulation, due diligence and formal agreements." }], cta: "Discuss asset management"
+  },
+  "family-office": {
+    title: "Family office", accent: "partnerships.", kicker: "INVESTMENT PLATFORMS",
+    intro: "AFII may consider project-level partnership opportunities with family offices and other qualified counterparties where mandate, fit and governance align.", image: "/images/investments-feature.jpg",
+    sections: [{ heading: "Partnership opportunities", body: "Potential opportunities can include renewable energy, logistics and other real assets. Each proposal is considered individually and may be accepted or declined without obligation." }, { heading: "Important information", body: "This page is informational only and does not solicit investments or offer investment management or advice to any family office or individual." }], cta: "Contact the investment team"
+  },
+  "principal-investments": {
+    title: "Principal", accent: "investments.", kicker: "PRINCIPAL INVESTMENTS",
+    intro: "A focus on selected opportunities, co-investment, strategic holdings and long-term value creation, subject to investment approval.", image: "/images/investments-feature.jpg",
+    sections: [{ heading: "Opportunity assessment", body: "Potential opportunities are assessed for strategic fit, commercial fundamentals, risk, governance, valuation and the relevant investment horizon." }, { heading: "No offer or commitment", body: "Nothing on this page is an offer to invest or a commitment to fund any proposal. All decisions remain subject to due diligence, approvals and definitive documentation." }], cta: "Discuss an investment opportunity"
+  },
+  "project-specific-finance": {
+    title: "Project-specific", accent: "finance.", kicker: "INVESTMENT BANKING & CAPITAL RAISING",
+    intro: "Capital raising and structuring perspectives shaped around the specific commercial and financial requirements of a project.", image: "/images/project-finance-feature.jpg",
+    sections: [{ heading: "Capital raising strategy", body: "The process can consider project fundamentals, capital structure, sponsor capacity, financing requirements and potential investor or lender profiles." }, { heading: "Mandate-led execution", body: "Potential structures and outcomes depend on due diligence, market conditions, investor requirements and formal approvals." }], cta: "Discuss project-specific finance"
+  },
   "trust": {
     title: "Trust, transparency", accent: "& governance.", kicker: "RESPONSIBLE STRUCTURING",
     intro: "AFII Group has published principles for public-public cooperation structures, with emphasis on transparent governance, clearly separated roles and accountable project frameworks.", image: "/images/governance-feature.jpg",
@@ -163,6 +225,15 @@ const pages: Record<string, PageContent> = {
       { heading: "Request access or support", body: "For access requests or technical support, contact deals@afiicapital.com and include the project reference supplied to you, if applicable." }
     ], cta: "Request VDR access"
   },
+  "offices": { title: "Local", accent: "presence.", kicker: "OFFICES & CONTACTS", intro: "Official office and contact information published by AFII Capital. For local contact information or meeting arrangements, write to our team and we will connect you with the appropriate person.", image: "/images/office-london.jpg", sections: [ { heading: "United Kingdom", body: "AFII Capital Partners Limited — City Road, London, England. Lorem ipsum dolor sit amet, consectetur adipiscing elit." }, { heading: "Germany", body: "AFII Structured Finance GmbH — Eschborn, Germany. Lorem ipsum dolor sit amet, consectetur adipiscing elit." }, { heading: "New Delhi, India", body: "AFII Corporate Advisors Limited — Safdarjung Enclave, New Delhi, India. Lorem ipsum dolor sit amet, consectetur adipiscing elit." }, { heading: "Mumbai, India", body: "AFII Infrastructure Advisory — Lower Parel, Mumbai, India. Lorem ipsum dolor sit amet, consectetur adipiscing elit." }, { heading: "Israel", body: "AFII partner and advisory presence in Israel. Lorem ipsum dolor sit amet, consectetur adipiscing elit." } ], cta: "Contact AFII" },
+};
+
+const sectorDetailLinks: Record<string, { href: string; label: string }> = {
+  "Aviation": { href: "/aviation-business", label: "Explore sector ↗" },
+  "Infrastructure & energy": { href: "/sector-infrastructure-energy", label: "Explore sector ↗" },
+  "Commodities & industry": { href: "/sector-commodities-industry", label: "Explore sector ↗" },
+  "Project-specific finance": { href: "/sector-project-specific-finance", label: "Explore sector ↗" },
+  "Government & business": { href: "/sector-government-business", label: "Explore sector ↗" },
 };
 
 export function generateStaticParams() { return Object.keys(pages).map((slug) => ({ slug })); }
@@ -195,8 +266,13 @@ async function ContentPageContent({ params }: { params: Promise<{ slug: string }
   const page = pages[slug];
   if (!page) notFound();
   const isTransactions = slug === "transactions";
-  return <main><SiteHeader /><section className="page-hero"><div className="page-hero-image"><Image src={page.image} alt="" fill priority sizes="100vw" /></div><div className="page-hero-shade" /><div className="container page-hero-content"><div className="eyebrow eyebrow-light"><span />{page.kicker}</div><h1>{page.title}<br /><em>{page.accent}</em></h1><p>{page.intro}</p><div className="breadcrumb"><Link href="/">Home</Link><span>/</span><span>{page.kicker}</span></div></div></section>
-    <section className="content-main section-pad"><div className="container content-layout"><aside className="content-sidebar"><span className="sidebar-label">EXPLORE AFII</span><Link href="/project-finance">Project finance</Link><Link href="/equipment-finance">Equipment finance</Link><Link href="/eca-financing">Export credit financing</Link><Link href="/sectors">Industries &amp; sectors</Link><Link href="/transactions">Transactions</Link><Link href="/investments">Investments</Link><Link href="/contact">Contact</Link></aside><div className="content-article">{slug === "team" && <section className="leadership-directory-grid" aria-label="AFII Capital leadership team">
+  return <main><SiteHeader /><section className={`page-hero${slug === "offices" ? " page-hero-offices" : ""}`}><div className="page-hero-image"><Image src={page.image} alt="" fill priority sizes="100vw" /></div><div className="page-hero-shade" /><div className="container page-hero-content">{slug === "offices" ? <div className="office-hero-layout"><div><div className="eyebrow eyebrow-light"><span />{page.kicker}</div><h1>{page.title}<br /><em>Cross-border perspective.</em></h1><p>{page.intro}</p><div className="breadcrumb"><Link href="/">Home</Link><span>/</span><span>{page.kicker}</span></div></div><div className="office-globe" role="img" aria-label="Animated globe highlighting AFII office locations"><div className="office-globe-grid"><div className="office-globe-equator" /></div><i className="office-pin office-pin-uk"><span>UK</span></i><i className="office-pin office-pin-germany"><span>Germany</span></i><i className="office-pin office-pin-india"><span>New Delhi</span></i><i className="office-pin office-pin-mumbai"><span>Mumbai</span></i><i className="office-pin office-pin-israel"><span>Israel</span></i><i className="office-pin office-pin-uae"><span>UAE</span></i></div></div> : <><div className="eyebrow eyebrow-light"><span />{page.kicker}</div><h1>{page.title}<br /><em>{page.accent}</em></h1><p>{page.intro}</p><div className="breadcrumb"><Link href="/">Home</Link><span>/</span><span>{page.kicker}</span></div></>}</div></section>
+    <section className="content-main section-pad"><div className="container content-layout"><aside className="content-sidebar"><span className="sidebar-label">EXPLORE AFII</span><div className="sidebar-directory">
+  <span className="sidebar-directory-heading">Expertise</span><Link className={slug === "expertise" ? "is-active" : ""} href="/expertise">All expertise</Link><Link href="/project-finance">Project finance</Link><Link href="/equity">Equity &amp; structuring</Link><Link href="/mezzanine">Mezzanine finance</Link><Link href="/securitizations">Securitizations</Link><Link href="/infrastructure-debt-refinancing">Infrastructure debt refinancing</Link><Link href="/project-specific-finance">Project-specific finance</Link><Link href="/government-advisory">Government advisory</Link><Link href="/equipment-finance">Equipment finance</Link><Link href="/eca-financing">Export credit financing</Link><Link href="/aviation-business">Aviation finance</Link><Link href="/sme-finance">SME finance</Link><Link href="/asset-management">Asset management</Link><Link href="/family-office">Family office</Link><Link href="/principal-investments">Principal investments</Link>
+  <span className="sidebar-directory-heading">Sectors</span><Link href="/sectors">All sectors</Link><Link href="/aviation-business">Aviation</Link><Link href="/sector-infrastructure-energy">Infrastructure &amp; energy</Link><Link href="/sector-commodities-industry">Commodities &amp; industry</Link><Link href="/sector-project-specific-finance">Project-specific finance</Link><Link href="/sector-government-business">Government &amp; business</Link>
+  <span className="sidebar-directory-heading">Transactions &amp; offices</span><Link href="/transactions">Transactions</Link><Link href="/offices">Offices</Link>
+  <span className="sidebar-directory-heading">About AFII</span><Link href="/about-afii">About AFII</Link><Link href="/team">Leadership</Link><Link href="/group">Group network</Link><Link href="/investments">Investments</Link><Link href="/trust">Trust &amp; governance</Link><Link href="/vdr">Virtual data room</Link><Link href="/contact">Contact</Link>
+</div></aside><div className="content-article">{slug === "team" && <section className="leadership-directory-grid" aria-label="AFII Capital leadership team">
   {[
     { name: "Dr. Mahesh M. Gandhi", role: "Managing Director & President", location: "Frankfurt", image: "/images/team-mahesh-gandhi.png" },
     { name: "Johann Mair", role: "Senior Partner", location: "Munich · K3M", image: "/images/team-johann-mair.png" },
@@ -206,8 +282,10 @@ async function ContentPageContent({ params }: { params: Promise<{ slug: string }
     { name: "Vinit Vidyarthi", role: "Senior Partner · Insurance & Investment Banking", location: "New Delhi", image: "/images/team-vinit-vidyarthi.jpeg" },
     { name: "Punam Bhasin", role: "Director · AFII Corp (India)", location: "India", image: "/images/team-punam-bhasin.jpg" },
     { name: "Ralph Ketelhut", role: "Senior Partner", location: "Munich · K3M", image: "/images/team-ralph-ketelhut.jpg" },
-    { name: "Sidhartha Gandhi", role: "AFII Group", location: "Leadership", image: "/images/team-sidhartha-gandhi.jpg" },
-    { name: "R. P. Gupta", role: "Senior Advisor · Railways", location: "India", image: "/images/team-rp-gupta.png" },
+    { name: "Sidhartha S. Gandhi", role: "Government Advisory & Infrastructure Development", location: "India", image: "/images/team-sidhartha-gandhi.jpg" },
+    { name: "Swapnil Gandhi", role: "Government Advisory & Infrastructure Development", location: "India", image: "" },
+    { name: "Michel Buffat", role: "Strategic Partner · AGENOVA", location: "Switzerland · Europe", image: "" },
+    { name: "Vikram Kaushal", role: "Asset Management & Investment Platforms", location: "India", image: "" },
     { name: "K. Aakash", role: "Director · AFII Corp", location: "New Delhi", image: "/images/team-kumar-aakash.jpg" },
     { name: "Jonathan Pallares", role: "Business Partner", location: "Helsinki", image: "/images/team-jonathan-pallares.jpg" },
     { name: "Arun Lohiya", role: "Senior Advisor · Aviation Business", location: "Ahmedabad", image: "/images/team-arun-lohiya.jpg" },
@@ -226,7 +304,8 @@ async function ContentPageContent({ params }: { params: Promise<{ slug: string }
     </div>
   </article>)}
 </section>}
-{page.sections.map((section, i) => <section className={`content-section${isTransactions ? " content-section-transactions" : ""}`} key={section.heading}>{!isTransactions && <div className="content-section-number">{String(i + 1).padStart(2, "0")}</div>}<div><h2>{section.heading}</h2><p>{section.body}</p>{section.bullets && <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>}{isTransactions && i === 1 && <TransactionTable />}</div></section>)}{slug === "vdr" && <section className="vdr-application-panel" aria-labelledby="vdr-application-title">
+
+{slug === "offices" ? <div className="office-cards-grid">{[{name:"United Kingdom",type:"Headquarters",entity:"AFII Capital Partners Limited",address:"City Road, London, England",image:"/images/office-london.jpg"},{name:"Germany",type:"Registered office",entity:"AFII Structured Finance GmbH",address:"Eschborn, Germany",image:"/images/office-germany.jpg"},{name:"New Delhi, India",type:"India back office",entity:"AFII Corporate Advisors Limited",address:"Safdarjung Enclave, New Delhi, India",image:"/images/office-delhi.jpg"},{name:"Mumbai, India",type:"Infrastructure advisory",entity:"AFII Infrastructure Advisory",address:"Lower Parel, Mumbai, India",image:"/images/office-mumbai.jpg"},{name:"Israel",type:"Partner network",entity:"AFII partner and advisory presence",address:"Further details to be confirmed",image:""}].map((office)=><article className="office-card" key={office.name}><div className="office-preview-image">{office.image?<Image src={office.image} alt={`${office.name} office`} width={700} height={420} style={{width:"100%",height:"175px",objectFit:"cover"}}/>:<div className="office-placeholder">Office image placeholder</div>}</div><div className="office-card-info"><span className="eyebrow">{office.type}</span><h2>{office.name}</h2><p>{office.entity}</p><address>{office.address}</address><p className="office-location-details">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Further local information will be added.</p></div></article>)}</div> : page.sections.map((section, i) => <section className={`content-section${isTransactions ? " content-section-transactions" : ""}`} key={section.heading}>{!isTransactions && <div className="content-section-number">{String(i + 1).padStart(2, "0")}</div>}<div><h2>{section.heading}</h2><p>{section.body}</p>{slug === "sectors" && sectorDetailLinks[section.heading] && <Link className="sector-inline-link" href={sectorDetailLinks[section.heading].href}>{sectorDetailLinks[section.heading].label}</Link>}{section.bullets && <ul>{section.bullets.map((bullet) => <li key={bullet}>{bullet}</li>)}</ul>}{isTransactions && i === 1 && <TransactionTable />}</div></section>)}{slug === "vdr" && <section className="vdr-application-panel" aria-labelledby="vdr-application-title">
   <div className="vdr-panel-heading">
     <span className="vdr-panel-kicker">AFII CAPITAL · CONFIDENTIAL PROCESS</span>
     <h2 id="vdr-application-title">Virtual Data Room Application</h2>
@@ -245,8 +324,7 @@ async function ContentPageContent({ params }: { params: Promise<{ slug: string }
       allowFullScreen
     />
   </div>
-  <p className="vdr-form-footnote">If the form does not load in your browser, use “Open application form” above. For access support, contact <a href="mailto:deals@afiicapital.com">deals@afiicapital.com</a>.</p>
+  <p className="vdr-form-footnote">If the form does not load in your browser, use “Open application formâ€ above. For access support, contact <a href="mailto:deals@afiicapital.com">deals@afiicapital.com</a>.</p>
 </section>}
 <div className="content-callout"><div className="eyebrow"><span /> NEXT STEP</div><h2>{page.cta ?? "Talk to AFII"}</h2><p>Share a short outline of your project or enquiry and the team can direct it to the appropriate specialist.</p><a className="button button-dark" href={`mailto:${slug === "investments" ? "invest@afii.eu" : slug === "vdr" ? "deals@afiicapital.com" : "reachus@afiicapital.com"}?subject=${encodeURIComponent(page.cta ?? "AFII Capital enquiry")}`}>Contact AFII <span aria-hidden="true">↗</span></a></div></div></div></section><SiteFooter /></main>;
 }
-

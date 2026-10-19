@@ -8,7 +8,7 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
 
 
-/* PATCH 05 — responsive navigation, consistent page heroes and image treatment */
+/* PATCH 05 â€” responsive navigation, consistent page heroes and image treatment */
 .site-header{position:sticky;top:0;z-index:100;background:#fff}
 .header-inner{gap:clamp(18px,2vw,34px)}
 .main-nav{flex:1;justify-content:flex-end;gap:clamp(13px,1.55vw,25px);white-space:nowrap;min-width:0}
@@ -85,7 +85,7 @@
 @media(prefers-reduced-motion:reduce){.service-image img{transition:none}}
 @media(max-width:900px){.nav-group:hover>.nav-dropdown{display:none}.nav-group.is-expanded:hover>.nav-dropdown{display:block}}
 
-/* PATCH 06 — hero alignment, page gutters, readability and sticky sidebar */
+/* PATCH 06 â€” hero alignment, page gutters, readability and sticky sidebar */
 /* Keep the page-hero content inside the same centered grid as the header. */
 .page-hero-content.container{width:min(calc(100% - 80px),var(--container));max-width:var(--container);margin-inline:auto;padding-left:0;padding-right:0}
 /* Keep the homepage CTA directly below its copy and aligned to the same left edge. */
@@ -126,7 +126,7 @@
 }
 
 
-/* PATCH 07 — more editorial homepage rhythm, restrained cards and visual journal */
+/* PATCH 07 â€” more editorial homepage rhythm, restrained cards and visual journal */
 /* Remove the short label rules that made section headings feel overly templated. */
 .eyebrow>span,
 .hero-kicker>span{display:none!important}
@@ -197,7 +197,7 @@
 }
 
 
-/* PATCH 08 — photo-led approach cards, user-supplied gallery images and refined type */
+/* PATCH 08 â€” photo-led approach cards, user-supplied gallery images and refined type */
 /* Increase the AFII wordmark and section titles subtly, without changing the brand. */
 .brand-wordmark strong{font-size:calc(1em + 1px)}
 .brand-wordmark small{font-size:calc(1em + 1px)}
@@ -251,7 +251,7 @@
 }
 
 
-/* PATCH 09 — legibility, spacing and offices */
+/* PATCH 09 â€” legibility, spacing and offices */
 :root { --paper: #fff; --ink: #14243a; }
 html, body { background: #fff; color: #24344b; }
 body { font-size: 16px; line-height: 1.7; }
@@ -356,7 +356,7 @@ body { font-size: 16px; line-height: 1.7; }
 
 body, main, .intro, .expertise, .transaction-teaser, .image-story, .office-preview, .offices-section { background-color: #ffffff; }
 
-/* PATCH 10 — official office details and navigation correction */
+/* PATCH 10 â€” official office details and navigation correction */
 .nav-dropdown-about { left: 0 !important; right: auto !important; }
 .nav-dropdown-about { min-width: 235px; }
 .office-card address { margin: 0 0 13px; color: #34465d; font-size: 14px; line-height: 1.65; font-style: normal; }
@@ -546,7 +546,7 @@ main,
 }
 /* End AFII PATCH 13 FIXED */
 
-/* AFII PATCH 14 — responsive navigation, restrained black typography, mobile scroll lock */
+/* AFII PATCH 14 â€” responsive navigation, restrained black typography, mobile scroll lock */
 :root {
   --ink: #111111;
   --muted: #343434;
@@ -708,7 +708,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 500; }
 }
 
 
-/* AFII PATCH 15 — contrast-aware headings, numbered markers and responsive polish */
+/* AFII PATCH 15 â€” contrast-aware headings, numbered markers and responsive polish */
 .hero h1,
 .hero h2,
 .hero h3,
@@ -845,7 +845,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 500; }
 .content-layout .content-callout h3 { color: #111111; }
 
 
-/* AFII Patch 16 — clearer editorial hierarchy, numbered markers, and mobile navigation */
+/* AFII Patch 16 â€” clearer editorial hierarchy, numbered markers, and mobile navigation */
 :root { --afii-gold-glow: rgba(213,181,117,.34); }
 html { scroll-behavior: smooth; }
 body { overflow-wrap: break-word; }
@@ -1089,7 +1089,7 @@ body { overflow-wrap: break-word; }
   .transaction-page-buttons { gap:2px; }
 }
 
-/* AFII PATCH 18 — transactions page layout and blue table */
+/* AFII PATCH 18 â€” transactions page layout and blue table */
 .content-section-transactions {
   grid-template-columns: minmax(0, 1fr) !important;
   width: 100%;
@@ -1372,7 +1372,7 @@ body { overflow-wrap: break-word; }
   .leadership-profile-photo { aspect-ratio: 5 / 4.5; }
   .leadership-profile-info { padding: 1rem; }
 }
-/* Leadership directory refinement — restrained 3D depth and slow colour-shift glow */
+/* Leadership directory refinement â€” restrained 3D depth and slow colour-shift glow */
 .leadership-profile-card {
   position: relative;
   isolation: isolate;
@@ -1474,3 +1474,310 @@ body { overflow-wrap: break-word; }
   .main-nav.is-open{padding-left:18px;padding-right:18px}
   .brand{gap:9px}
 }
+
+
+/* AFII SBU expertise menu, active route indicator and sector directory */
+.main-nav > a.is-active, .main-nav .nav-group-top > a.is-active { position: relative; }
+.main-nav > a.is-active::after, .main-nav .nav-group-top > a.is-active::after { content: ""; position: absolute; left: 0; right: 0; bottom: -7px; height: 2px; background: var(--gold, #b98a42); }
+.nav-dropdown-expertise { width: min(860px, 88vw); max-height: min(72vh, 620px); overflow-y: auto; padding: 20px; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+.nav-mega-group { min-width: 0; }
+.nav-mega-title { display: block; color: var(--navy, #152238) !important; font-size: 13px !important; font-weight: 700; line-height: 1.4; padding: 10px 8px !important; border-bottom: 1px solid var(--line, #e5e1d8); }
+.nav-mega-links { display: flex; flex-direction: column; }
+.nav-mega-links a { display: block; padding: 9px 8px !important; font-size: 13px !important; line-height: 1.35; white-space: normal !important; }
+.sector-directory-grid { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 16px; margin: 34px 0 48px; }
+.sector-directory-card { display: block; border: 1px solid var(--line, #e5e1d8); padding: 24px; text-decoration: none; color: inherit; transition: border-color .2s, transform .2s, background .2s; }
+.sector-directory-card:hover { border-color: var(--gold, #b98a42); transform: translateY(-2px); background: #fbfaf7; }
+.sector-directory-card > span { color: var(--gold, #b98a42); font-size: 12px; letter-spacing: .12em; }
+.sector-directory-card h2 { margin: 14px 0 8px; font-size: clamp(20px, 2vw, 27px); font-weight: 500; }
+.sector-directory-card p { margin: 0 0 18px; color: var(--muted, #657083); line-height: 1.6; }
+.sector-directory-card b { font-size: 12px; font-weight: 600; }
+@media (max-width: 900px) {
+ .nav-dropdown-expertise { width: 100%; max-height: none; overflow: visible; display: block; padding: 4px 0 8px; }
+ .nav-mega-group { border-bottom: 1px solid rgba(21,34,56,.08); padding: 3px 0; }
+ .nav-mega-title { font-size: 14px !important; padding: 11px 10px !important; }
+ .nav-mega-links a { font-size: 13px !important; padding: 10px 14px !important; }
+ .sector-directory-grid { grid-template-columns: minmax(0,1fr); }
+}
+
+
+/* AFII navigation correction: hover-only dropdown + side submenu per business line */
+@media (min-width:901px){
+ .main-nav .nav-group{position:relative}
+ .main-nav .nav-dropdown{display:none!important;visibility:hidden;opacity:0;pointer-events:none}
+ .main-nav .nav-group:hover>.nav-dropdown,.main-nav .nav-group:focus-within>.nav-dropdown{display:block!important;visibility:visible;opacity:1;pointer-events:auto}
+ .main-nav .nav-dropdown-expertise{position:absolute;top:calc(100% + 16px);left:50%;transform:translateX(-50%);display:block!important;width:390px;max-height:min(72vh,620px);overflow:visible;padding:10px 14px;background:#fff;border:1px solid #e6e0d5;border-top:2px solid var(--gold,#b98a42);box-shadow:0 16px 34px rgba(20,30,45,.14);z-index:100}
+ .main-nav .nav-dropdown-expertise:not(:hover):not(:focus-within){visibility:hidden;opacity:0;pointer-events:none}
+ .main-nav .nav-dropdown-expertise::before{content:"";position:absolute;left:0;right:0;top:-18px;height:18px}
+ .nav-mega-group{position:relative;display:block;min-width:0;border-bottom:1px solid #eeeae3}
+ .nav-mega-group:last-child{border-bottom:0}
+ .nav-mega-title{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 10px!important;font-size:15px!important;line-height:1.45;font-weight:500!important;color:#263448!important}
+ .nav-mega-title:after{content:"â€º";color:var(--gold,#b98a42);font-size:22px}
+ .nav-mega-title:hover,.nav-mega-group:hover>.nav-mega-title{background:#f7f5f0;color:#986b2e!important}
+ .nav-mega-links{display:none;position:absolute;left:calc(100% + 8px);top:-1px;width:285px;max-height:min(65vh,520px);overflow-y:auto;padding:8px 12px;background:#fff;border:1px solid #e6e0d5;border-top:2px solid var(--gold,#b98a42);box-shadow:0 14px 28px rgba(20,30,45,.12)}
+ .nav-mega-group:hover>.nav-mega-links,.nav-mega-group:focus-within>.nav-mega-links{display:flex;flex-direction:column}
+ .nav-mega-links a{display:block;padding:12px 9px!important;font-size:15px!important;line-height:1.45;white-space:normal!important;color:#344155!important;border-bottom:1px solid #f0ede7}
+ .nav-mega-links a:last-child{border-bottom:0}
+ .nav-mega-links a:hover{color:#986b2e!important;background:#f7f5f0}
+ .nav-dropdown-about{position:absolute;top:calc(100% + 16px);left:0;min-width:235px;max-height:min(70vh,520px);overflow-y:auto;padding:10px;background:#fff;border:1px solid #e6e0d5;border-top:2px solid var(--gold,#b98a42);box-shadow:0 16px 34px rgba(20,30,45,.14);z-index:100}
+ .nav-dropdown-about a{display:block;padding:12px 10px!important;font-size:15px!important;border-bottom:1px solid #f0ede7}
+ .nav-dropdown-about a:last-child{border-bottom:0}
+ .nav-disclosure{display:none!important}
+}
+.nav-dropdown a.is-active,.nav-mega-links a.is-active{position:relative;color:#986b2e!important}
+.nav-dropdown a.is-active:after,.nav-mega-links a.is-active:after{content:"";position:absolute;left:10px;right:10px;bottom:5px;height:1px;background:var(--gold,#b98a42)}
+@media(max-width:900px){
+ .main-nav .nav-group-top{display:flex;align-items:center;justify-content:space-between;gap:10px}
+ .main-nav .nav-group-top>a{flex:1}
+ .main-nav .nav-dropdown-expertise{display:none!important;position:static;transform:none;width:100%;max-height:none;overflow:visible;box-shadow:none;border:0;padding:4px 0 8px;background:#faf9f6}
+ .main-nav .nav-group.is-expanded>.nav-dropdown{display:block!important;visibility:visible;opacity:1;pointer-events:auto}
+ .main-nav .nav-mega-group{border-bottom:1px solid #e9e5dd}
+ .main-nav .nav-mega-title{font-size:15px!important;padding:12px 10px!important}
+ .main-nav .nav-mega-title:after{display:none}
+ .main-nav .nav-mega-links{display:flex;position:static;width:100%;max-height:none;overflow:visible;box-shadow:none;border:0;padding:0 0 5px 10px;background:transparent}
+ .main-nav .nav-mega-links a,.main-nav .nav-dropdown-about a{font-size:15px!important;padding:12px 10px!important}
+ .main-nav.is-open{overflow-y:auto!important;overflow-x:hidden!important;-webkit-overflow-scrolling:touch;overscroll-behavior:contain}
+}
+
+
+
+/* AFII Expertise dropdown hover bridge and sector-list CTA styling. */
+@media (min-width: 901px) {
+  .main-nav .nav-group:has(.nav-dropdown-expertise) { position: relative; }
+  .main-nav .nav-group:has(.nav-dropdown-expertise):hover .nav-dropdown-expertise,
+  .main-nav .nav-group:has(.nav-dropdown-expertise):focus-within .nav-dropdown-expertise {
+    display: block !important; visibility: visible !important; opacity: 1 !important; pointer-events: auto !important;
+  }
+  .main-nav .nav-dropdown-expertise { transition: opacity .12s ease; }
+}
+.sector-inline-link { display: inline-flex; align-items: center; gap: .45rem; margin-top: 1rem; padding-bottom: .25rem; border-bottom: 1px solid currentColor; color: #9b6b2b; font-size: .9rem; font-weight: 600; text-decoration: none; }
+.sector-inline-link:hover { color: #172338; }
+
+
+
+/* AFII navigation directory: dedicated expertise landing, comprehensive side index and footer */
+.nav-group-top > a.is-active, .main-nav > a.is-active { text-decoration: none; }
+.main-nav > a.is-active::after, .main-nav .nav-group-top > a.is-active::after { bottom: -8px; }
+.nav-dropdown-expertise { left: 50%; transform: translateX(-50%); width: min(980px, calc(100vw - 48px)); grid-template-columns: repeat(3, minmax(0, 1fr)); max-height: min(72vh, 680px); overflow-y: auto; }
+.nav-dropdown-expertise .nav-mega-links a { font-size: 14px; line-height: 1.45; padding: 10px 8px; white-space: normal; }
+.nav-dropdown-expertise .nav-mega-title { font-size: 14px !important; }
+.nav-dropdown a.is-active::after, .nav-mega-links a.is-active::after { content: ""; display: block; height: 1px; background: var(--gold, #b98a42); margin-top: 4px; }
+.content-sidebar { max-height: calc(100vh - 150px); overflow: hidden; }
+.sidebar-directory { display: flex; flex-direction: column; min-height: 0; overflow-y: auto; overscroll-behavior: contain; padding-right: 8px; max-height: calc(100vh - 230px); }
+.sidebar-directory-heading { color: var(--navy, #152238); font-size: 11px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; padding: 18px 0 5px; }
+.sidebar-directory a { font-size: 13px; padding: 9px 0; }
+.sidebar-directory a.is-active { color: var(--gold, #b98a42); box-shadow: inset 0 -1px var(--gold, #b98a42); }
+.footer-directory { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 26px; width: 100%; }
+.footer-directory-group { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; min-width: 0; }
+.footer-directory-group a { color: inherit; font-size: 12px; line-height: 1.55; text-decoration: none; }
+.footer-directory-group a:hover { color: var(--gold, #b98a42); }
+.footer-directory-group .footer-directory-title { font-size: 14px; font-weight: 600; margin: 0 0 6px; }
+.footer-directory-group .footer-directory-heading { font-size: 11px; font-weight: 600; margin-top: 9px; }
+@media (max-width: 900px) {
+ .nav-dropdown-expertise { left: auto; transform: none; width: 100%; grid-template-columns: 1fr; max-height: none; overflow: visible; }
+ .content-sidebar { max-height: none; overflow: visible; }
+ .sidebar-directory { max-height: 360px; }
+ .footer-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 18px; }
+}
+@media (max-width: 520px) { .footer-directory { grid-template-columns: 1fr; } .sidebar-directory { max-height: 300px; } }
+
+
+/* AFII footer refinement: clear hierarchy, larger type, balanced desktop grid and centered mobile identity. */
+.site-footer { overflow: hidden; }
+.site-footer .footer-main { display: grid; grid-template-columns: minmax(210px, .95fr) minmax(0, 3fr) minmax(190px, .9fr); align-items: start; gap: clamp(26px, 3vw, 54px); padding-top: 54px; padding-bottom: 48px; }
+.footer-identity { min-width: 0; }
+.footer-identity > p { margin: 22px 0 0; color: #e2e7ef; font-size: 15px; line-height: 1.8; }
+.site-footer .footer-directory { grid-column: 2; grid-row: 1; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: clamp(18px, 2vw, 34px); }
+.site-footer .footer-directory-group { gap: 10px; }
+.site-footer .footer-directory-group a { font-size: 14px; line-height: 1.6; overflow-wrap: anywhere; }
+.site-footer .footer-directory-group .footer-directory-title { display: inline-block; margin: 0 0 8px; color: #e0bd78; font-size: 16px; line-height: 1.4; font-weight: 600; }
+.site-footer .footer-directory-group .footer-directory-heading { display: block; margin: 12px 0 5px; color: #fff; font-size: 13px; line-height: 1.5; font-weight: 600; }
+.footer-sbu-group { width: 100%; padding: 0 0 12px; border-bottom: 1px solid rgba(255,255,255,.12); }
+.footer-sbu-group:last-child { border-bottom: 0; }
+.footer-sbu-links { display: flex; flex-wrap: wrap; gap: 5px 14px; }
+.footer-sbu-links a { color: #f2d49a; }
+.footer-contact { grid-column: 3; grid-row: 1; justify-self: end; min-width: 0; }
+.site-footer .footer-email { display: inline-flex; align-items: center; gap: 9px; color: #e0bd78; font-size: 15px; line-height: 1.6; white-space: nowrap; }
+.footer-socials { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+.footer-socials a { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; border: 1px solid rgba(224,189,120,.75); border-radius: 50%; color: #f4f5f7; font-size: 16px; font-weight: 700; text-decoration: none; transition: background .18s ease, color .18s ease; }
+.footer-socials a:hover { background: #e0bd78; color: #091321; }
+.site-footer .footer-bottom { display: grid; grid-template-columns: 1fr 1.3fr auto; gap: 20px; align-items: center; padding-top: 22px; padding-bottom: 22px; font-size: 13px; line-height: 1.6; }
+.site-footer .footer-bottom > * { min-width: 0; }
+@media (max-width: 1100px) and (min-width: 901px) {
+ .site-footer .footer-main { grid-template-columns: minmax(170px,.8fr) minmax(0,2.6fr); }
+ .site-footer .footer-directory { grid-column: 2; grid-row: 1; grid-template-columns: repeat(2,minmax(0,1fr)); }
+ .footer-contact { grid-column: 1 / -1; grid-row: 2; justify-self: end; }
+ .footer-socials { justify-content: flex-start; }
+}
+@media (max-width: 900px) {
+ .site-footer .footer-main { display: flex; flex-direction: column; align-items: stretch; gap: 28px; padding-top: 36px; padding-bottom: 30px; }
+ .footer-identity { display: flex; flex-direction: column; align-items: center; text-align: center; }
+ .footer-identity > p { margin-top: 14px; font-size: 15px; line-height: 1.65; }
+ .site-footer .footer-directory { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 26px 22px; width: 100%; }
+ .site-footer .footer-directory-group { gap: 9px; }
+ .site-footer .footer-directory-group .footer-directory-title { font-size: 17px; margin-bottom: 6px; }
+ .site-footer .footer-directory-group .footer-directory-heading { font-size: 14px; margin-top: 9px; }
+ .site-footer .footer-directory-group a { font-size: 14px; line-height: 1.55; }
+ .footer-expertise-group { grid-column: 1 / -1; }
+ .footer-sbu-group { padding-bottom: 11px; }
+ .footer-sbu-links { gap: 7px 16px; }
+ .footer-contact { display: flex; flex-direction: column; align-items: center; justify-self: auto; width: 100%; padding-top: 22px; border-top: 1px solid rgba(255,255,255,.15); }
+ .site-footer .footer-email { font-size: 15px; white-space: normal; text-align: center; }
+ .footer-socials { justify-content: center; margin-top: 16px; }
+ .site-footer .footer-bottom { grid-template-columns: 1fr; justify-items: center; gap: 9px; text-align: center; padding-top: 18px; padding-bottom: 20px; font-size: 12px; }
+}
+@media (max-width: 420px) {
+ .site-footer .footer-main { gap: 24px; }
+ .site-footer .footer-directory { gap: 22px 14px; }
+ .site-footer .footer-directory-group a { font-size: 13px; }
+ .site-footer .footer-directory-group .footer-directory-title { font-size: 16px; }
+}
+
+
+/* Footer directory: show only the five business-unit headings, with clear group hierarchy. */
+.site-footer .footer-directory { grid-template-columns: repeat(4, minmax(0, 1fr)); align-items: start; }
+.site-footer .footer-directory-group { min-width: 0; }
+.site-footer .footer-directory-title { display: inline-block; width: fit-content; padding-bottom: 9px; margin-bottom: 9px !important; border-bottom: 1px solid rgba(224,189,120,.48); color: #e0bd78 !important; font-size: 16px !important; font-weight: 700 !important; }
+.site-footer .footer-directory-sbu { display: block; width: 100%; padding: 8px 0; color: #f2f4f7 !important; border-bottom: 1px solid rgba(255,255,255,.10); font-size: 14px !important; line-height: 1.5 !important; }
+.site-footer .footer-directory-sbu:last-child { border-bottom: 0; }
+.site-footer .footer-directory-sbu:hover { color: #e0bd78 !important; }
+.site-footer .footer-directory-group .footer-subtitle { margin-top: 20px !important; }
+@media (max-width: 900px) {
+  .site-footer .footer-directory { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 24px; }
+  .site-footer .footer-expertise-group { grid-column: 1; grid-row: 1; }
+  .site-footer .footer-transactions-group { grid-column: 1; grid-row: 2; }
+  .site-footer .footer-sectors-group { grid-column: 2; grid-row: 1; }
+  .site-footer .footer-about-group { grid-column: 2; grid-row: 2; }
+  .site-footer .footer-directory-title { font-size: 16px !important; line-height: 1.4 !important; }
+  .site-footer .footer-directory-group a:not(.footer-directory-title) { font-size: 14px !important; line-height: 1.65 !important; }
+  .site-footer .footer-directory-sbu { font-size: 14px !important; }
+}
+@media (max-width: 420px) {
+  .site-footer .footer-directory { gap: 24px 18px; }
+  .site-footer .footer-directory-group a:not(.footer-directory-title) { overflow-wrap: anywhere; }
+}
+
+
+
+
+
+/* AFII FOOTER ALIGNMENT AND GOLD LINK FIX */
+footer a, footer a:visited, footer nav a, footer [class*="footer"] a { color: var(--gold, #d7b36a) !important; text-align: left; }
+footer a:hover, footer nav a:hover { color: #f0d59a !important; }
+@media (min-width: 900px) {
+  footer .footer-grid, footer [class*="footer-grid"], footer [class*="footer__grid"], footer [class*="footerColumns"], footer [class*="footer-columns"] {
+    grid-template-columns: minmax(220px, 1.35fr) repeat(4, minmax(130px, .8fr)) minmax(190px, 1fr) !important;
+    align-items: start; column-gap: clamp(24px, 2.5vw, 48px) !important;
+  }
+  footer [class*="about"], footer [class*="About"] { margin-left: clamp(8px, 1vw, 20px); }
+  footer [class*="expertise"], footer [class*="Expertise"], footer [class*="expertise"] a, footer [class*="Expertise"] a { text-align: left !important; }
+}
+@media (max-width: 899px) {
+  footer .footer-grid, footer [class*="footer-grid"], footer [class*="footer__grid"], footer [class*="footerColumns"], footer [class*="footer-columns"] {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important; column-gap: 22px !important; row-gap: 24px !important; align-items: start !important;
+  }
+  footer [class*="brand"], footer [class*="Brand"], footer [class*="identity"], footer [class*="Identity"] { text-align: center; }
+  footer [class*="expertise"], footer [class*="Expertise"], footer [class*="sector"], footer [class*="Sector"], footer [class*="transaction"], footer [class*="Transaction"], footer [class*="about"], footer [class*="About"], footer [class*="office"], footer [class*="Office"] { text-align: left !important; justify-self: stretch; min-width: 0; }
+  footer [class*="expertise"] a, footer [class*="Expertise"] a, footer [class*="sector"] a, footer [class*="Sector"] a, footer [class*="transaction"] a, footer [class*="Transaction"] a, footer [class*="about"] a, footer [class*="About"] a, footer [class*="office"] a, footer [class*="Office"] a { text-align: left !important; justify-content: flex-start !important; }
+}
+/* Expertise titles and links use the same gold as the other footer columns. */
+footer [class*="expertise"] a,
+footer [class*="Expertise"] a,
+footer [class*="expertise"] a:visited,
+footer [class*="Expertise"] a:visited {
+  color: #d7b36a !important;
+}
+/* END AFII FOOTER ALIGNMENT AND GOLD LINK FIX */
+
+/* AFII FOOTER COLUMN BALANCE FIX */
+/* Wider SBU column reduces wrapping; compact the email column and balance the footer groups. */
+@media (min-width: 900px) {
+  footer .footer-grid,
+  footer [class*="footer-grid"],
+  footer [class*="footer__grid"],
+  footer [class*="footerColumns"],
+  footer [class*="footer-columns"] {
+    grid-template-columns: minmax(250px, 1.35fr) minmax(260px, 1.45fr) minmax(180px, 1fr) minmax(170px, .9fr) minmax(170px, .9fr) minmax(205px, .95fr) !important;
+    column-gap: clamp(18px, 1.65vw, 30px) !important;
+    align-items: start !important;
+  }
+  footer [class*="expertise"],
+  footer [class*="Expertise"] {
+    min-width: 0;
+    width: 100%;
+    text-align: left !important;
+  }
+  footer [class*="expertise"] a,
+  footer [class*="Expertise"] a {
+    color: var(--gold, #d7b36a) !important;
+    text-align: left !important;
+    white-space: normal;
+    overflow-wrap: normal;
+    word-break: normal;
+  }
+  footer [class*="social"],
+  footer [class*="Social"] {
+    justify-self: end;
+  }
+}
+@media (max-width: 899px) {
+  footer [class*="expertise"],
+  footer [class*="Expertise"],
+  footer [class*="sector"],
+  footer [class*="Sector"],
+  footer [class*="transaction"],
+  footer [class*="Transaction"],
+  footer [class*="about"],
+  footer [class*="About"],
+  footer [class*="office"],
+  footer [class*="Office"] {
+    text-align: left !important;
+    justify-self: stretch;
+  }
+  footer [class*="expertise"] a,
+  footer [class*="Expertise"] a {
+    color: var(--gold, #d7b36a) !important;
+    text-align: left !important;
+  }
+}
+/* END AFII FOOTER COLUMN BALANCE FIX */
+
+/* Office/globe and dropdown interaction refinement */
+.nav-group{position:relative}.nav-group .nav-dropdown{z-index:1200}.nav-group:hover .nav-dropdown,.nav-group:focus-within .nav-dropdown,.nav-group.is-expanded .nav-dropdown{display:block}.nav-dropdown-about{top:100%;margin-top:0}.nav-dropdown-about:before{content:"";position:absolute;left:0;right:0;top:-12px;height:12px}
+.office-hero-layout{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(280px,.82fr);align-items:center;gap:clamp(28px,5vw,80px);width:100%}.office-globe{position:relative;width:min(100%,430px);aspect-ratio:1;margin:0 auto;border:1px solid rgba(215,174,98,.5);border-radius:50%;overflow:hidden;background:radial-gradient(circle at 35% 28%,rgba(54,102,139,.55),transparent 34%),radial-gradient(circle at 50% 50%,#122943 0%,#07111f 72%);box-shadow:inset -28px -15px 55px rgba(0,0,0,.65),0 0 55px rgba(198,151,73,.12)}.office-globe:before,.office-globe:after{content:"";position:absolute;inset:9%;border:1px solid rgba(216,178,105,.35);border-radius:50%}.office-globe:after{inset:0 26%}.office-globe-grid{position:absolute;inset:-15%;border:1px solid rgba(216,178,105,.28);border-radius:50%;transform:rotate(-22deg);animation:officeGlobeSpin 24s linear infinite}.office-globe-grid:before,.office-globe-grid:after{content:"";position:absolute;inset:0 23%;border:1px solid rgba(216,178,105,.25);border-radius:50%}.office-globe-grid:after{inset:0 43%}.office-globe-equator{position:absolute;left:-5%;right:-5%;top:43%;height:16%;border:1px solid rgba(216,178,105,.28);border-radius:50%}.office-pin{position:absolute;width:9px;height:9px;border-radius:50%;background:#e84949;border:2px solid #fff;box-shadow:0 0 0 5px rgba(232,73,73,.18),0 0 18px rgba(232,73,73,.75);z-index:2}.office-pin span{position:absolute;left:13px;top:-7px;color:#fff;font-size:11px;white-space:nowrap;text-shadow:0 1px 4px #07111f}.office-pin-uk{left:46%;top:29%}.office-pin-germany{left:53%;top:31%}.office-pin-india{left:66%;top:49%}.office-pin-israel{left:56%;top:39%}.office-pin-uae{left:60%;top:44%}.office-pin-mumbai{left:68%;top:54%}@keyframes officeGlobeSpin{to{transform:rotate(338deg)}}.office-cards-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}.office-card{min-width:0}.office-card .office-preview-image{position:relative;overflow:hidden;background:linear-gradient(135deg,#e9e3d7,#c9d3dc)}.office-placeholder{min-height:175px;display:flex;align-items:center;justify-content:center;padding:18px;text-align:center;color:#8b6b35;background:linear-gradient(135deg,#f4f0e8,#e2e7ec);border:1px dashed #c4a66c;letter-spacing:.12em;text-transform:uppercase;font-size:11px}.office-location-details{color:#42536a;line-height:1.7}@media(max-width:1000px){.office-hero-layout{grid-template-columns:1fr}.office-globe{width:min(70vw,350px)}.office-cards-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:640px){.office-globe{width:min(78vw,300px)}.office-cards-grid{grid-template-columns:1fr}}
+
+/* AFII Earth/globe refinement: contained hero, real rotating Earth video, connected location pins. */
+.offices-hero{padding:clamp(54px,6vw,88px) 0 68px;overflow:hidden}
+.office-hero-layout{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(360px,.92fr);align-items:center;gap:clamp(34px,5vw,84px);width:min(calc(100% - 80px),var(--container));margin-inline:auto}
+.office-hero-copy{min-width:0;max-width:760px}
+.office-hero-copy .eyebrow{margin-bottom:20px}
+.office-hero-copy h1{font-size:clamp(42px,5.3vw,72px);overflow-wrap:normal}
+.office-hero-copy p{max-width:700px}
+.office-earth-stage{width:100%;min-width:0;display:flex;flex-direction:column;align-items:center;gap:18px}
+.office-earth-video-wrap{position:relative;width:min(100%,510px);aspect-ratio:1;border-radius:50%;overflow:hidden;background:#07111f;isolation:isolate;box-shadow:0 22px 60px rgba(8,20,35,.2),0 0 0 1px rgba(182,138,69,.45)}
+.office-earth-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;border-radius:50%;transform:scale(1.02);filter:saturate(1.08) contrast(1.05)}
+.office-earth-shade{position:absolute;inset:0;border-radius:50%;background:radial-gradient(ellipse at 35% 28%,rgba(255,255,255,.03),transparent 45%),linear-gradient(90deg,rgba(5,15,28,.24),transparent 44%,rgba(4,12,24,.45));box-shadow:inset -35px -5px 55px rgba(0,0,0,.38),inset 0 0 0 1px rgba(230,190,116,.35);pointer-events:none}
+.office-earth-connections{position:absolute;inset:0;width:100%;height:100%;overflow:visible;pointer-events:none}
+.office-earth-connections path{fill:none;stroke:#f04d52;stroke-width:1.8;stroke-dasharray:5 5;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 4px rgba(255,65,75,.7));animation:earthConnectionFlow 5s linear infinite}
+.office-earth-connections circle{fill:#f34e54;stroke:#fff;stroke-width:2.2;vector-effect:non-scaling-stroke;filter:drop-shadow(0 0 5px rgba(255,70,75,.8))}
+.earth-label{position:absolute;display:flex;align-items:center;gap:6px;color:#fff;font-size:clamp(9px,.8vw,12px);font-weight:650;white-space:nowrap;text-shadow:0 1px 5px #07111f;z-index:3}
+.earth-label i{display:block;width:8px;height:8px;border-radius:50%;background:#f24d52;border:2px solid white;box-shadow:0 0 0 4px rgba(242,77,82,.25)}
+.earth-label-uk{left:36%;top:32%}.earth-label-germany{left:47%;top:37%}.earth-label-israel{left:51%;top:48%}.earth-label-uae{left:57%;top:53%}.earth-label-india{left:62%;top:61%}
+.office-earth-caption{display:flex;align-items:center;gap:9px;color:#8c6b38;font-size:10px;letter-spacing:.16em;font-weight:700;text-align:center}.office-earth-caption span{width:24px;height:1px;background:#b68a45}
+@keyframes earthConnectionFlow{to{stroke-dashoffset:-40}}
+.office-preview-marquee{display:flex;overflow:hidden;gap:20px;mask-image:linear-gradient(90deg,transparent,#000 3%,#000 97%,transparent)}
+.office-preview-track{display:flex;flex:none;gap:22px;animation:officeCardsLoop 42s linear infinite}
+.office-preview-track .office-preview-card{width:clamp(220px,19vw,275px);flex:none}
+.office-preview-marquee:hover .office-preview-track{animation-play-state:paused}
+@keyframes officeCardsLoop{to{transform:translateX(calc(-100% - 22px))}}
+@media(max-width:1000px){.office-hero-layout{grid-template-columns:1fr;gap:38px}.office-hero-copy{max-width:800px}.office-earth-video-wrap{width:min(75vw,440px)}.office-preview-track .office-preview-card{width:260px}}
+@media(max-width:640px){.office-hero-layout{width:calc(100% - 36px)}.offices-hero{padding:42px 0 50px}.office-hero-copy h1{font-size:clamp(38px,10vw,54px)}.office-hero-copy p{font-size:16px;line-height:1.7}.office-earth-video-wrap{width:min(88vw,360px)}.earth-label{font-size:9px}.office-preview-track .office-preview-card{width:235px}.office-preview-track{gap:14px}.office-preview-marquee{gap:14px}}
+@media(prefers-reduced-motion:reduce){.office-earth-connections path,.office-preview-track{animation-play-state:paused!important}}
+
+/* AFII Offices: clean rectangular video on the right, without globe overlays. */
+.offices-hero .office-hero-layout{grid-template-columns:minmax(0,1.05fr) minmax(0,.95fr);gap:clamp(32px,5vw,76px);align-items:center}
+.offices-hero .office-earth-stage{width:100%;min-width:0;display:block;overflow:hidden;border:0;border-radius:0;background:transparent;box-shadow:none}
+.offices-hero .office-earth-video{position:relative;display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain;border:0;border-radius:0;background:transparent;box-shadow:none;filter:none;transform:none}
+.offices-hero .office-earth-video-wrap,.offices-hero .office-earth-shade,.offices-hero .office-earth-connections,.offices-hero .earth-label,.offices-hero .office-earth-caption{display:none!important}
+.offices-hero .office-earth-stage::before,.offices-hero .office-earth-stage::after{content:none!important;display:none!important}
+@media(max-width:1000px){.offices-hero .office-hero-layout{grid-template-columns:1fr}.offices-hero .office-earth-video{max-height:420px;aspect-ratio:16/9;object-fit:contain}}
+@media(max-width:640px){.offices-hero .office-earth-video{aspect-ratio:16/9;max-height:300px}}

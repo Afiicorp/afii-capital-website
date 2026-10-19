@@ -20,9 +20,10 @@ const services = [
 ];
 const sectors = [
   ["01", "Aviation", "Aircraft acquisition, airport development and maintenance infrastructure.", "/aviation-business"],
-  ["02", "Infrastructure", "Energy, railways, roads, ports and associated project or equipment finance.", "/project-finance"],
-  ["03", "Industry & commodities", "Industrial assets, capital goods and manufacturing projects.", "/equipment-finance"],
-  ["04", "Financial services", "Structured instruments, asset-backed approaches and cross-border finance.", "/securitizations"],
+  ["02", "Infrastructure & energy", "Energy, railways, roads, ports and essential infrastructure assets.", "/sector-infrastructure-energy"],
+  ["03", "Commodities & industry", "Industrial assets, capital goods and manufacturing projects.", "/sector-commodities-industry"],
+  ["04", "Project-specific finance", "Financing perspectives tailored to the requirements of each project.", "/sector-project-specific-finance"],
+  ["05", "Government & business", "Institutional cooperation and government-linked infrastructure initiatives.", "/sector-government-business"],
 ];
 
 export default function Home() {
@@ -124,13 +125,21 @@ export default function Home() {
             <div><div className="eyebrow"><span></span> OFFICES &amp; CONTACTS</div><h2>Local presence.<br /><em>Cross-border perspective.</em></h2></div>
             <p>Find AFII Capital’s published headquarters, registered office and regional advisory contacts.</p>
           </div>
-          <div className="office-preview-grid office-preview-grid-five">
+          <div className="office-preview-marquee" aria-label="AFII office locations"><div className="office-preview-track">
             <Link href="/offices" className="office-preview-card"><div className="office-preview-image"><Image src="/images/office-london.jpg" alt="Representative city and infrastructure imagery for the UK network" fill sizes="(max-width: 760px) 100vw, 20vw" /></div><span className="office-preview-city">United Kingdom</span><span className="office-preview-link">Headquarters ↗</span></Link>
             <Link href="/offices" className="office-preview-card"><div className="office-preview-image"><Image src="/images/office-germany.jpg" alt="Representative commercial architecture for the German network" fill sizes="(max-width: 760px) 100vw, 20vw" /></div><span className="office-preview-city">Germany</span><span className="office-preview-link">Registered office ↗</span></Link>
             <Link href="/offices" className="office-preview-card"><div className="office-preview-image"><Image src="/images/office-delhi.jpg" alt="AFII India back-office building in New Delhi" fill sizes="(max-width: 760px) 100vw, 20vw" /></div><span className="office-preview-city">New Delhi, India</span><span className="office-preview-link">India back office ↗</span></Link>
             <Link href="/offices" className="office-preview-card"><div className="office-preview-image"><Image src="/images/office-mumbai.jpg" alt="Mumbai city skyline used for infrastructure advisory" fill sizes="(max-width: 760px) 100vw, 20vw" /></div><span className="office-preview-city">Mumbai, India</span><span className="office-preview-link">Infrastructure advisory ↗</span></Link>
             <Link href="/offices" className="office-preview-card"><div className="office-preview-image"><Image src="/images/office-uae.jpg" alt="UAE infrastructure development imagery" fill sizes="(max-width: 760px) 100vw, 20vw" /></div><span className="office-preview-city">United Arab Emirates</span><span className="office-preview-link">Middle East ↗</span></Link>
-          </div>
+            <Link href="/offices" className="office-preview-card"><div className="office-preview-image"><Image src="/images/about-afii-feature.jpg" alt="Regional partner network in Israel" fill sizes="(max-width: 760px) 100vw, 20vw" /></div><span className="office-preview-city">Israel</span><span className="office-preview-link">Regional coverage ↗</span></Link>
+          </div><div className="office-preview-track office-preview-track-clone" aria-hidden="true">
+            <Link href="/offices" tabIndex={-1} className="office-preview-card"><div className="office-preview-image"><Image src="/images/office-london.jpg" alt="" fill sizes="20vw" /></div><span className="office-preview-city">United Kingdom</span><span className="office-preview-link">Headquarters ↗</span></Link>
+            <Link href="/offices" tabIndex={-1} className="office-preview-card"><div className="office-preview-image"><Image src="/images/office-germany.jpg" alt="" fill sizes="20vw" /></div><span className="office-preview-city">Germany</span><span className="office-preview-link">Registered office ↗</span></Link>
+            <Link href="/offices" tabIndex={-1} className="office-preview-card"><div className="office-preview-image"><Image src="/images/office-delhi.jpg" alt="" fill sizes="20vw" /></div><span className="office-preview-city">New Delhi, India</span><span className="office-preview-link">India back office ↗</span></Link>
+            <Link href="/offices" tabIndex={-1} className="office-preview-card"><div className="office-preview-image"><Image src="/images/office-mumbai.jpg" alt="" fill sizes="20vw" /></div><span className="office-preview-city">Mumbai, India</span><span className="office-preview-link">Infrastructure advisory ↗</span></Link>
+            <Link href="/offices" tabIndex={-1} className="office-preview-card"><div className="office-preview-image"><Image src="/images/office-uae.jpg" alt="" fill sizes="20vw" /></div><span className="office-preview-city">United Arab Emirates</span><span className="office-preview-link">Middle East ↗</span></Link>
+            <Link href="/offices" tabIndex={-1} className="office-preview-card"><div className="office-preview-image"><Image src="/images/about-afii-feature.jpg" alt="" fill sizes="20vw" /></div><span className="office-preview-city">Israel</span><span className="office-preview-link">Regional coverage ↗</span></Link>
+          </div></div>
         </div>
       </section>
 
