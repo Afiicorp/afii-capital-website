@@ -324,7 +324,7 @@ async function ContentPageContent({ params }: { params: Promise<{ slug: string }
       allowFullScreen
     />
   </div>
-  <p className="vdr-form-footnote">If the form does not load in your browser, use “Open application formâ€ above. For access support, contact <a href="mailto:deals@afiicapital.com">deals@afiicapital.com</a>.</p>
+  <p className="vdr-form-footnote">If the form does not load in your browser, use “Open application form” above. For access support, contact <a href="mailto:deals@afiicapital.com">deals@afiicapital.com</a>.</p>
 </section>}
 <div className="content-callout"><div className="eyebrow"><span /> NEXT STEP</div><h2>{page.cta ?? "Talk to AFII"}</h2><p>Share a short outline of your project or enquiry and the team can direct it to the appropriate specialist.</p><a className="button button-dark" href={`mailto:${slug === "investments" ? "invest@afii.eu" : slug === "vdr" ? "deals@afiicapital.com" : "reachus@afiicapital.com"}?subject=${encodeURIComponent(page.cta ?? "AFII Capital enquiry")}`}>Contact AFII <span aria-hidden="true">↗</span></a></div></div></div></section><SiteFooter /></main>;
 }

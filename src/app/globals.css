@@ -8,7 +8,7 @@
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;transition-duration:.01ms!important;animation-duration:.01ms!important}}
 
 
-/* PATCH 05 â€” responsive navigation, consistent page heroes and image treatment */
+/* PATCH 05 — responsive navigation, consistent page heroes and image treatment */
 .site-header{position:sticky;top:0;z-index:100;background:#fff}
 .header-inner{gap:clamp(18px,2vw,34px)}
 .main-nav{flex:1;justify-content:flex-end;gap:clamp(13px,1.55vw,25px);white-space:nowrap;min-width:0}
@@ -85,7 +85,7 @@
 @media(prefers-reduced-motion:reduce){.service-image img{transition:none}}
 @media(max-width:900px){.nav-group:hover>.nav-dropdown{display:none}.nav-group.is-expanded:hover>.nav-dropdown{display:block}}
 
-/* PATCH 06 â€” hero alignment, page gutters, readability and sticky sidebar */
+/* PATCH 06 — hero alignment, page gutters, readability and sticky sidebar */
 /* Keep the page-hero content inside the same centered grid as the header. */
 .page-hero-content.container{width:min(calc(100% - 80px),var(--container));max-width:var(--container);margin-inline:auto;padding-left:0;padding-right:0}
 /* Keep the homepage CTA directly below its copy and aligned to the same left edge. */
@@ -126,7 +126,7 @@
 }
 
 
-/* PATCH 07 â€” more editorial homepage rhythm, restrained cards and visual journal */
+/* PATCH 07 — more editorial homepage rhythm, restrained cards and visual journal */
 /* Remove the short label rules that made section headings feel overly templated. */
 .eyebrow>span,
 .hero-kicker>span{display:none!important}
@@ -197,7 +197,7 @@
 }
 
 
-/* PATCH 08 â€” photo-led approach cards, user-supplied gallery images and refined type */
+/* PATCH 08 — photo-led approach cards, user-supplied gallery images and refined type */
 /* Increase the AFII wordmark and section titles subtly, without changing the brand. */
 .brand-wordmark strong{font-size:calc(1em + 1px)}
 .brand-wordmark small{font-size:calc(1em + 1px)}
@@ -251,7 +251,7 @@
 }
 
 
-/* PATCH 09 â€” legibility, spacing and offices */
+/* PATCH 09 — legibility, spacing and offices */
 :root { --paper: #fff; --ink: #14243a; }
 html, body { background: #fff; color: #24344b; }
 body { font-size: 16px; line-height: 1.7; }
@@ -356,7 +356,7 @@ body { font-size: 16px; line-height: 1.7; }
 
 body, main, .intro, .expertise, .transaction-teaser, .image-story, .office-preview, .offices-section { background-color: #ffffff; }
 
-/* PATCH 10 â€” official office details and navigation correction */
+/* PATCH 10 — official office details and navigation correction */
 .nav-dropdown-about { left: 0 !important; right: auto !important; }
 .nav-dropdown-about { min-width: 235px; }
 .office-card address { margin: 0 0 13px; color: #34465d; font-size: 14px; line-height: 1.65; font-style: normal; }
@@ -546,7 +546,7 @@ main,
 }
 /* End AFII PATCH 13 FIXED */
 
-/* AFII PATCH 14 â€” responsive navigation, restrained black typography, mobile scroll lock */
+/* AFII PATCH 14 — responsive navigation, restrained black typography, mobile scroll lock */
 :root {
   --ink: #111111;
   --muted: #343434;
@@ -708,7 +708,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 500; }
 }
 
 
-/* AFII PATCH 15 â€” contrast-aware headings, numbered markers and responsive polish */
+/* AFII PATCH 15 — contrast-aware headings, numbered markers and responsive polish */
 .hero h1,
 .hero h2,
 .hero h3,
@@ -845,7 +845,7 @@ h1, h2, h3, h4, h5, h6 { font-weight: 500; }
 .content-layout .content-callout h3 { color: #111111; }
 
 
-/* AFII Patch 16 â€” clearer editorial hierarchy, numbered markers, and mobile navigation */
+/* AFII Patch 16 — clearer editorial hierarchy, numbered markers, and mobile navigation */
 :root { --afii-gold-glow: rgba(213,181,117,.34); }
 html { scroll-behavior: smooth; }
 body { overflow-wrap: break-word; }
@@ -1089,7 +1089,7 @@ body { overflow-wrap: break-word; }
   .transaction-page-buttons { gap:2px; }
 }
 
-/* AFII PATCH 18 â€” transactions page layout and blue table */
+/* AFII PATCH 18 — transactions page layout and blue table */
 .content-section-transactions {
   grid-template-columns: minmax(0, 1fr) !important;
   width: 100%;
@@ -1372,7 +1372,7 @@ body { overflow-wrap: break-word; }
   .leadership-profile-photo { aspect-ratio: 5 / 4.5; }
   .leadership-profile-info { padding: 1rem; }
 }
-/* Leadership directory refinement â€” restrained 3D depth and slow colour-shift glow */
+/* Leadership directory refinement — restrained 3D depth and slow colour-shift glow */
 .leadership-profile-card {
   position: relative;
   isolation: isolate;
@@ -1511,7 +1511,7 @@ body { overflow-wrap: break-word; }
  .nav-mega-group{position:relative;display:block;min-width:0;border-bottom:1px solid #eeeae3}
  .nav-mega-group:last-child{border-bottom:0}
  .nav-mega-title{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 10px!important;font-size:15px!important;line-height:1.45;font-weight:500!important;color:#263448!important}
- .nav-mega-title:after{content:"â€º";color:var(--gold,#b98a42);font-size:22px}
+ .nav-mega-title:after{content:"›";color:var(--gold,#b98a42);font-size:22px}
  .nav-mega-title:hover,.nav-mega-group:hover>.nav-mega-title{background:#f7f5f0;color:#986b2e!important}
  .nav-mega-links{display:none;position:absolute;left:calc(100% + 8px);top:-1px;width:285px;max-height:min(65vh,520px);overflow-y:auto;padding:8px 12px;background:#fff;border:1px solid #e6e0d5;border-top:2px solid var(--gold,#b98a42);box-shadow:0 14px 28px rgba(20,30,45,.12)}
  .nav-mega-group:hover>.nav-mega-links,.nav-mega-group:focus-within>.nav-mega-links{display:flex;flex-direction:column}
@@ -1781,3 +1781,13 @@ footer [class*="Expertise"] a:visited {
 .offices-hero .office-earth-stage::before,.offices-hero .office-earth-stage::after{content:none!important;display:none!important}
 @media(max-width:1000px){.offices-hero .office-hero-layout{grid-template-columns:1fr}.offices-hero .office-earth-video{max-height:420px;aspect-ratio:16/9;object-fit:contain}}
 @media(max-width:640px){.offices-hero .office-earth-video{aspect-ratio:16/9;max-height:300px}}
+
+/* AFII offices map: restrained editorial world-map panel */
+.office-map-panel{width:100%;min-width:0}
+.office-world-map{display:block;width:100%;height:auto;max-height:430px;overflow:visible}
+.office-world-map .office-map-marker circle{fill:#c43d43;stroke:#fff;stroke-width:3;filter:drop-shadow(0 2px 3px rgba(16,35,54,.22))}
+.office-world-map .office-map-labels text{font:600 13px Arial,sans-serif;fill:#102c49;paint-order:stroke;stroke:#f7f9fb;stroke-width:3px;stroke-linejoin:round}
+.office-map-legend{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-top:14px;color:#536579;font-size:11px;letter-spacing:.04em}
+.office-map-legend span:first-child{display:flex;align-items:center;gap:7px}
+.office-map-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#c43d43}
+@media(max-width:1000px){.office-map-panel{max-width:680px;margin-inline:auto}}
