@@ -44,7 +44,7 @@ const offices = [
     label: "Middle East office",
     title: "AFII Middle East LLC FZ",
     image: "/images/office-uae.jpg",
-    address: "Meydan Free Zone, United Arab Emirates",
+    address: "5842+944, Dubai, United Arab Emirates",
     description: "AFII Middle East LLC FZ provides services to clients in the Middle East and to European and Far Eastern clients looking to raise capital from or invest in the UAE.",
     extra: "Led by Ms. Kirti Gulati. Contact: reachus@afii.eu.",
   },
@@ -53,7 +53,7 @@ const offices = [
     label: "Partner network",
     title: "Partner and mandate coverage",
     image: "/images/office-israel.jpg",
-    address: "Israel",
+    address: "Tel Aviv, Israel",
     description: "AFII’s cross-border network supports relevant mandates through local relationships. Contact AFII for current regional coverage and introductions.",
   },
   ...[
@@ -66,7 +66,7 @@ const offices = [
     label: "Partner network",
     title: "Partner and mandate coverage",
     image,
-    address: name,
+    address: ({ Singapore: "68 Circular Rd, Singapore 049422", Switzerland: "Gotthardstrasse 14, 6300 Zug, Switzerland", Vietnam: "Vinhomes Central Park, Thanh My Tay, Ho Chi Minh, Vietnam" } as Record<string, string>)[name] || name,
     description: `Partner and mandate coverage in ${name}, subject to local relationships and project requirements. Contact AFII for current regional coverage and introductions.`,
   })),
 ];

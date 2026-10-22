@@ -1874,3 +1874,18 @@ footer [class*="Expertise"] a:visited {
   .offices-section.section-pad { padding-top: 34px !important; }
   .offices-section .section-heading { margin-bottom: 22px !important; }
 }
+/* AFII consolidated transaction and office carousel patch */
+.content-section-transactions .transaction-table thead th{background:#101e36!important}
+.office-preview-controls{display:flex;justify-content:flex-end;gap:9px;margin:-16px 0 14px}
+.office-preview-controls button,.afii-featured-actions button{border:1px solid #b88b47;border-radius:50%;width:40px;height:40px;background:#fff;color:#12233d;cursor:pointer;font-size:20px}
+.office-preview-marquee{overflow-x:auto;scroll-behavior:smooth;scrollbar-width:thin;mask-image:none;touch-action:pan-x}
+.office-preview-marquee:active .office-preview-track,.office-preview-marquee:hover .office-preview-track{animation-play-state:paused}
+.afii-featured-transactions{margin:30px 0 42px;min-width:0}
+.afii-featured-heading{display:flex;justify-content:space-between;align-items:end;gap:12px;margin-bottom:18px}
+.afii-featured-heading h3{font-size:clamp(24px,3vw,34px);font-weight:500;letter-spacing:-.035em;margin:8px 0 0}
+.afii-featured-actions{display:flex;gap:8px;flex-shrink:0}
+.afii-featured-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.afii-featured-card{margin:0;min-width:0;border:1px solid #e4e9ee;border-radius:12px;overflow:hidden;background:#f5f7f9}
+.afii-featured-card img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}
+.afii-featured-caption{font-size:12px!important;color:#67758a!important;margin-top:12px!important}
+@media(max-width:650px){.afii-featured-grid{grid-template-columns:1fr}.afii-featured-card:nth-child(2){display:none}.afii-featured-heading{align-items:center}.afii-featured-heading h3{font-size:23px}}

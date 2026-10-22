@@ -595,7 +595,7 @@ export default function TransactionTable() {
       <div className="transaction-controls">
         <label className="transaction-page-size">Show{" "}
           <select value={pageSize} onChange={(event) => { setPageSize(Number(event.target.value)); setPage(1); }}>
-            <option value={10}>10</option><option value={25}>25</option><option value={50}>50</option>
+            <option value={10}>10</option><option value={25}>25</option><option value={50}>50</option><option value={80}>80 / All</option>
           </select>{" "}entries
         </label>
         <label className="transaction-search">Search:
