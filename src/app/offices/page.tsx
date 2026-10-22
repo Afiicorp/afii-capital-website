@@ -28,7 +28,7 @@ const offices = [
     image: "/images/office-delhi.jpg",
     address: "Madan Sara Mathew Lane, B1/14 Safdarjung Enclave, New Delhi 110029, India",
     description: "India office and office of the India representative.",
-    extra: "Rep Director: Mr. Kumar Aakash (k.aakash@afiicapital.com). India Senior Advisor: Mr. Vinit Vidyarthi (vinit.vidyarthi@afiicorp.com).",
+    extra: "Rep Director: Mr. Kumar Aakash (k.aakash@afii.eu). India Senior Advisor: Mr. Vinit Vidyarthi (vinit.vidyarthi@afiicorp.com).",
   },
   {
     name: "Mumbai, India",
@@ -37,7 +37,7 @@ const offices = [
     image: "/images/office-mumbai.jpg",
     address: "The A-Club, Suite W4, One IndiaBulls, Tower 2A, 8th Floor, Lower Parel, Mumbai 400013, India",
     description: "Infrastructure advisory presence in Mumbai.",
-    extra: "Contact: Abhijit K. Avarsekar — aka@afiicapital.com.",
+    extra: "Contact: Abhijit K. Avarsekar — aka@afii.eu.",
   },
   {
     name: "United Arab Emirates",
@@ -46,7 +46,7 @@ const offices = [
     image: "/images/office-uae.jpg",
     address: "Meydan Free Zone, United Arab Emirates",
     description: "AFII Middle East LLC FZ provides services to clients in the Middle East and to European and Far Eastern clients looking to raise capital from or invest in the UAE.",
-    extra: "Led by Ms. Kirti Gulati. Contact: reachus@afiicapital.com.",
+    extra: "Led by Ms. Kirti Gulati. Contact: reachus@afii.eu.",
   },
   {
     name: "Israel",
@@ -110,7 +110,7 @@ export default function OfficesPage() {
               </article>
             ))}
           </div>
-          <p className="offices-note">For general enquiries, contact <a href="mailto:reachus@afiicapital.com">reachus@afiicapital.com</a>.</p>
+          <p className="offices-note">For general enquiries, contact <a href="mailto:reachus@afii.eu">reachus@afii.eu</a>.</p>
         </div>
       </section>
       <section className="contact-cta"><div className="container contact-inner"><div className="eyebrow eyebrow-light"><span></span> START A CONVERSATION</div><h2>Have a project<br />to <em>structure?</em></h2><p>Tell us about your mandate. We’ll connect you with the appropriate team.</p><Link className="button button-gold" href="/contact">Discuss a mandate</Link></div></section>
