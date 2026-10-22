@@ -1791,3 +1791,21 @@ footer [class*="Expertise"] a:visited {
 .office-map-legend span:first-child{display:flex;align-items:center;gap:7px}
 .office-map-legend i{display:inline-block;width:8px;height:8px;border-radius:50%;background:#c43d43}
 @media(max-width:1000px){.office-map-panel{max-width:680px;margin-inline:auto}}
+
+/* AFII October map refinement */
+@media (min-width: 1100px) {
+  .office-map-panel { min-width: 0; width: 115%; max-width: none; transform: translateX(-5%); }
+  .office-world-map { width: 100%; height: auto; display: block; }
+}
+@media (max-width: 1099px) {
+  .office-map-panel { width: 100%; }
+  .office-world-map { width: 100%; height: auto; display: block; }
+}
+/* AFII content refinement: expanded map and responsive hero */
+@media (min-width: 1100px) {
+ .offices-hero .office-hero-layout { grid-template-columns:minmax(0,.80fr) minmax(0,1.20fr);gap:clamp(28px,3vw,50px); }
+ .offices-hero .office-map-panel { width:125%;transform:translateX(-6%); }
+ .offices-hero .office-world-map { width:100%;max-height:none;min-height:465px;object-fit:fill; }
+}
+@media (min-width: 1400px) { .offices-hero .office-world-map { min-height:520px; } }
+@media (max-width: 1099px) { .offices-hero .office-map-panel {width:100%;transform:none} .offices-hero .office-world-map {max-height:none;height:auto;min-height:0} }

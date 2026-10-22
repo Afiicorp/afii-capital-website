@@ -82,15 +82,19 @@ export function SiteHeader() {
       </div>
       <header className="site-header" ref={headerRef}>
         <div className="container header-inner">
-          <Link className="brand" href="/" aria-label="AFII Capital Partners home" onClick={close}>
+          <Link className="brand" href="/" aria-label="AFII home" onClick={close}>
             <Image src="/images/afii-logo.png" alt="AFII logo" width={60} height={60} priority className="brand-mark" />
-            <span className="brand-wordmark"><strong>AFII CAPITAL</strong><small>PARTNERS</small></span>
+            
           </Link>
           <button type="button" className="menu-toggle" aria-label={menuOpen ? "Close navigation menu" : "Open navigation menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen(!menuOpen)}>
             <span></span><span></span>
           </button>
           <nav className={menuOpen ? "main-nav is-open" : "main-nav"} aria-label="Main navigation">
-            <Link className={isActive("/#approach") ? "is-active" : ""} href="/#approach" onClick={close}>Our approach</Link>
+            <div className={`nav-group ${aboutOpen ? "is-expanded" : ""}`}>
+              <div className="nav-group-top" onClick={(event) => { if (isMobileMenu() && !(event.target as HTMLElement).closest("a, button")) setAboutOpen((value) => !value); }}><Link className={isActive("/about-afii") ? "is-active" : ""} href="/about-afii" onClick={(event) => handleGroupLink(event, "about")}>About AFII</Link></div>
+              <div className="nav-dropdown nav-dropdown-about">{aboutLinks.filter(([label]) => label !== "Leadership").map(([label, href]) => <Link className={isActive(href) ? "is-active" : ""} href={href} key={href} onClick={close}>{label}</Link>)}</div>
+            </div>
+            
             <div className={`nav-group ${expertiseOpen ? "is-expanded" : ""}`}>
               <div className="nav-group-top" onClick={(event) => { if (isMobileMenu() && !(event.target as HTMLElement).closest("a, button")) setExpertiseOpen((value) => !value); }}><Link className={isActive("/expertise") || pathname.startsWith("/project-") || ["/equity","/mezzanine","/securitizations","/infrastructure-debt-refinancing","/equipment-finance","/eca-financing","/aviation-business","/sme-finance","/asset-management","/family-office","/principal-investments","/government-advisory"].some(isActive) ? "is-active" : ""} href="/expertise" onClick={(event) => handleGroupLink(event, "expertise")}>Expertise</Link></div>
               <div className="nav-dropdown nav-dropdown-expertise"><Link className="nav-mega-title" href="/expertise" onClick={close}>Explore all expertise</Link>{expertiseGroups.map((group) => <section className="nav-mega-group" key={group.title}><Link className="nav-mega-title" href="/expertise" onClick={close}>{group.title}</Link><div className="nav-mega-links">{group.links.map(([label, href]) => <Link className={isActive(href) ? "is-active" : ""} href={href} key={href} onClick={close}>{label}</Link>)}</div></section>)}</div>
@@ -98,10 +102,8 @@ export function SiteHeader() {
             <Link className={isActive("/sectors") || pathname.startsWith("/sector-") ? "is-active" : ""} href="/sectors" onClick={close}>Sectors</Link>
             <Link className={isActive("/transactions") ? "is-active" : ""} href="/transactions" onClick={close}>Transactions</Link>
             <Link className={isActive("/offices") ? "is-active" : ""} href="/offices" onClick={close}>Offices</Link>
-            <div className={`nav-group ${aboutOpen ? "is-expanded" : ""}`}>
-              <div className="nav-group-top" onClick={(event) => { if (isMobileMenu() && !(event.target as HTMLElement).closest("a, button")) setAboutOpen((value) => !value); }}><Link className={["/about-afii","/team","/group","/investments","/trust","/vdr","/contact"].some(isActive) ? "is-active" : ""} href="/about-afii" onClick={(event) => handleGroupLink(event, "about")}>About AFII</Link></div>
-              <div className="nav-dropdown nav-dropdown-about">{aboutLinks.map(([label, href]) => <Link className={isActive(href) ? "is-active" : ""} href={href} key={href} onClick={close}>{label}</Link>)}</div>
-            </div>
+            <Link className={isActive("/team") ? "is-active" : ""} href="/team" onClick={close}>Leadership</Link>
+            
             <Link className="nav-cta" href="/contact" onClick={close}>Discuss a mandate <span>↗</span></Link>
           </nav>
         </div>
@@ -122,7 +124,7 @@ export function SiteFooter() {
         <div className="footer-identity">
           <Link className="brand footer-brand" href="/">
             <Image src="/images/afii-logo.png" alt="AFII logo" width={48} height={48} className="brand-mark" />
-            <span className="brand-wordmark"><strong>AFII CAPITAL</strong><small>PARTNERS</small></span>
+            
           </Link>
           <p>Structured Finance &amp;<br />Infrastructure Investments</p>
         </div>
@@ -161,7 +163,7 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="container footer-bottom">
-        <span>© 2026 AFII Capital Partners. All rights reserved.</span>
+        <span>© 2026 AFII. All rights reserved.</span>
         <span>Information is provided for general informational purposes only.</span>
         <Link href="/trust">Trust &amp; governance</Link>
       </div>
