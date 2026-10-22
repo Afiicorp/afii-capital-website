@@ -77,7 +77,7 @@ export function SiteHeader() {
       <div className="topline">
         <div className="container topline-inner">
           <span>STRUCTURED FINANCE &amp; INFRASTRUCTURE INVESTMENTS</span>
-          <a href="mailto:reachus@afiicapital.com">reachus@afiicapital.com <span aria-hidden="true">↗</span></a>
+          <a href="mailto:reachus@afii.eu">reachus@afii.eu <span aria-hidden="true">↗</span></a>
         </div>
       </div>
       <header className="site-header" ref={headerRef}>
@@ -156,7 +156,7 @@ export function SiteFooter() {
           </div>
         </div>
         <div className="footer-contact">
-          <a className="footer-email" href="mailto:reachus@afiicapital.com">reachus@afiicapital.com <span aria-hidden="true">↗</span></a>
+          <a className="footer-email" href="mailto:reachus@afii.eu">reachus@afii.eu <span aria-hidden="true">↗</span></a>
           <div className="footer-socials" aria-label="Social media">
             {socialLinks.map((item) => <a key={item.label} href="#" aria-label={item.label} title={item.label} onClick={(event) => event.preventDefault()}>{item.mark}</a>)}
           </div>

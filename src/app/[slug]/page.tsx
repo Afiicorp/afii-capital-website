@@ -153,7 +153,7 @@ const pages: Record<string, PageContent> = {
     title: "Let's start a", accent: "conversation.", kicker: "CONTACT AFII CAPITAL",
     intro: "For information about a financing or advisory mandate, write to AFII Capital Partners and your enquiry can be directed to the appropriate team.", image: "/images/contact-feature.jpg",
     sections: [
-      { heading: "General enquiries", body: "Email: reachus@afiicapital.com. Please include your organisation, country, project or asset type, expected funding requirement and a suitable way to contact you." },
+      { heading: "General enquiries", body: "Email: reachus@afii.eu. Please include your organisation, country, project or asset type, expected funding requirement and a suitable way to contact you." },
       { heading: "Regional context", body: "AFII's published contact page lists offices and representatives in Germany, India, the UK and the UAE, alongside a wider international partner network. The relevant contracting entity depends on the mandate." },
       { heading: "Confidential information", body: "Please do not send sensitive, confidential or personal documents in an initial email unless the AFII team has agreed a suitable method for sharing them." }
     ], cta: "Email AFII Capital"
@@ -238,7 +238,7 @@ const pages: Record<string, PageContent> = {
     intro: "AFII's existing website describes a virtual data room for documents related to capital raising, infrastructure appraisals and strategic mandates.", image: "/images/virtual-data-room-feature.jpg",
     sections: [
       { heading: "Access by project reference", body: "Access to confidential project documents should only be arranged through the process and reference code provided directly by AFII. This redesigned information page does not itself accept or store confidential uploads." },
-      { heading: "Request access or support", body: "For access requests or technical support, contact deals@afiicapital.com and include the project reference supplied to you, if applicable." }
+      { heading: "Request access or support", body: "For access requests or technical support, contact deals@afii.eu and include the project reference supplied to you, if applicable." }
     ], cta: "Request VDR access"
   },
   "offices": { title: "Local", accent: "presence.", kicker: "OFFICES & CONTACTS", intro: "Official office and contact information published by AFII Capital. For local contact information or meeting arrangements, write to our team and we will connect you with the appropriate person.", image: "/images/office-london.jpg", sections: [ { heading: "United Kingdom", body: "AFII Capital Partners Limited — City Road, London, England. Lorem ipsum dolor sit amet, consectetur adipiscing elit." }, { heading: "Germany", body: "AFII Structured Finance GmbH — Eschborn, Germany. Lorem ipsum dolor sit amet, consectetur adipiscing elit." }, { heading: "New Delhi, India", body: "AFII Corporate Advisors Limited — Safdarjung Enclave, New Delhi, India. Lorem ipsum dolor sit amet, consectetur adipiscing elit." }, { heading: "Mumbai, India", body: "AFII Infrastructure Advisory — Lower Parel, Mumbai, India. Lorem ipsum dolor sit amet, consectetur adipiscing elit." }, { heading: "Israel", body: "AFII partner and advisory presence in Israel. Lorem ipsum dolor sit amet, consectetur adipiscing elit." } ], cta: "Contact AFII" },
@@ -340,7 +340,7 @@ async function ContentPageContent({ params }: { params: Promise<{ slug: string }
       allowFullScreen
     />
   </div>
-  <p className="vdr-form-footnote">If the form does not load in your browser, use “Open application form” above. For access support, contact <a href="mailto:deals@afiicapital.com">deals@afiicapital.com</a>.</p>
+  <p className="vdr-form-footnote">If the form does not load in your browser, use “Open application form” above. For access support, contact <a href="mailto:deals@afii.eu">deals@afii.eu</a>.</p>
 </section>}
-<div className="content-callout"><div className="eyebrow"><span /> NEXT STEP</div><h2>{page.cta ?? "Talk to AFII"}</h2><p>Share a short outline of your project or enquiry and the team can direct it to the appropriate specialist.</p><a className="button button-dark" href={`mailto:${slug === "investments" ? "invest@afii.eu" : slug === "vdr" ? "deals@afiicapital.com" : "reachus@afiicapital.com"}?subject=${encodeURIComponent(page.cta ?? "AFII Capital enquiry")}`}>Contact AFII <span aria-hidden="true">↗</span></a></div></div></div></section><SiteFooter /></main>;
+<div className="content-callout"><div className="eyebrow"><span /> NEXT STEP</div><h2>{page.cta ?? "Talk to AFII"}</h2><p>Share a short outline of your project or enquiry and the team can direct it to the appropriate specialist.</p><a className="button button-dark" href={`mailto:${slug === "investments" ? "invest@afii.eu" : slug === "vdr" ? "deals@afii.eu" : "reachus@afii.eu"}?subject=${encodeURIComponent(page.cta ?? "AFII Capital enquiry")}`}>Contact AFII <span aria-hidden="true">↗</span></a></div></div></div></section><SiteFooter /></main>;
 }
