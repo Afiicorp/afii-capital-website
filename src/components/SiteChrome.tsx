@@ -101,6 +101,7 @@ export function SiteHeader() {
             </div>
             <Link className={isActive("/sectors") || pathname.startsWith("/sector-") ? "is-active" : ""} href="/sectors" onClick={close}>Sectors</Link>
             <Link className={isActive("/transactions") ? "is-active" : ""} href="/transactions" onClick={close}>Transactions</Link>
+            <Link className={isActive("/careers") ? "is-active" : ""} href="/careers" onClick={close}>Careers</Link>
             <Link className={isActive("/offices") ? "is-active" : ""} href="/offices" onClick={close}>Offices</Link>
             <Link className={isActive("/team") ? "is-active" : ""} href="/team" onClick={close}>Leadership</Link>
             
@@ -152,7 +153,7 @@ export function SiteFooter() {
           </div>
           <div className="footer-directory-group footer-about-group">
             <Link className="footer-directory-title" href="/about-afii">About AFII</Link>
-            {[['About AFII', '/about-afii'], ['Leadership', '/team'], ['Group network', '/group'], ['Virtual data room', '/vdr'], ['Contact', '/contact']].map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
+            {[['About AFII', '/about-afii'], ['Leadership', '/team'], ['Group network', '/group'], ['Virtual data room', '/vdr'], ['Careers', '/careers'], ['Contact', '/contact']].map(([label, href]) => <Link href={href} key={href}>{label}</Link>)}
           </div>
         </div>
         <div className="footer-contact">

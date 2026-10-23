@@ -1,0 +1,327 @@
+/* AFII GROUP CAREERS — isolated design system. Does not replace the main site CSS. */
+.afii-careers{--ac-ink:#11243b;--ac-navy:#0c1d30;--ac-mid:#4e5d6d;--ac-gold:#c4a06a;--ac-edge:#e0e5e8;--ac-paper:#f6f7f7;--ac-white:#fff;background:#fff;color:var(--ac-ink);overflow:clip}
+.afii-careers *{box-sizing:border-box}
+.afii-careers .ac-eyebrow{font-size:11px;letter-spacing:.18em;font-weight:750;color:#987146;text-transform:uppercase;display:block;margin:0 0 22px}
+.afii-careers .ac-eyebrow-on-dark{color:#e1bf8b}
+.afii-careers h1,.afii-careers h2,.afii-careers h3{letter-spacing:-.035em}
+.afii-careers h1 em,.afii-careers h2 em{font-family:Georgia,serif;font-weight:400;font-style:italic;color:var(--ac-gold)}
+.afii-careers .ac-button{display:inline-flex;align-items:center;justify-content:space-between;gap:34px;min-height:52px;padding:15px 23px;font-size:12px;text-transform:uppercase;letter-spacing:.075em;font-weight:760;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .22s ease,background .22s ease,color .22s ease}
+.afii-careers .ac-button:hover{transform:translateY(-2px)}
+.afii-careers .ac-button-gold{background:#c9a874;color:#132136;border-color:#c9a874}
+.afii-careers .ac-button-gold:hover{background:#ddbf91}
+.afii-careers .ac-button-outline{color:#fff;border-color:#ffffff80;background:#ffffff06}
+.afii-careers .ac-button-outline:hover{background:#ffffff20}
+.afii-careers .ac-button-dark{color:#fff;background:#142942;border-color:#142942}
+.afii-careers .ac-button-dark:hover{background:#263f5c}
+.afii-careers .ac-button-soft{background:#f1f3f4;color:#17283b;border-color:#dce2e5}
+.afii-careers .ac-button-wide{width:100%}
+.afii-careers .ac-arrow{font-size:18px;font-weight:400;line-height:1}
+.afii-careers .ac-text-link{display:inline-flex;align-items:center;gap:18px;text-decoration:none;border-bottom:1px solid #baa88c;padding-bottom:9px;color:var(--ac-ink);font-size:13px;font-weight:700}
+.afii-careers .ac-text-link:hover{color:#936f45}
+.afii-careers .ac-section-heading{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:44px}
+.afii-careers .ac-section-heading h2{font-size:clamp(34px,4.3vw,65px);font-weight:560;line-height:1.06;margin:0}
+.afii-careers .ac-section-heading>p{max-width:365px;margin:0 0 5px;color:#647283;font-size:15px;line-height:1.75}
+.afii-careers .ac-section-heading>.ac-text-link{margin-bottom:10px;white-space:nowrap}
+/* Cinematic hero */
+.afii-careers .ac-hero{position:relative;min-height:680px;min-height:min(790px,82svh);color:#fff;background:#122940;isolation:isolate;display:flex;align-items:stretch}
+.afii-careers .ac-hero-media{position:absolute;inset:0;overflow:hidden;z-index:-2}
+.afii-careers .ac-hero-poster{position:absolute;inset:0;background:url('/images/hero-building-alt.jpg') center 46%/cover no-repeat;transform:scale(1.03)}
+.afii-careers .ac-hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.78}
+.afii-careers .ac-hero-overlay{position:absolute;inset:0;background:linear-gradient(91deg,rgba(5,20,36,.92) 0%,rgba(7,22,38,.75) 44%,rgba(9,20,31,.24) 100%),linear-gradient(0deg,rgba(4,18,32,.65),transparent 30%)}
+.afii-careers .ac-hero-inside{display:flex;flex-direction:column;justify-content:space-between;flex:1;min-width:0;padding-top:clamp(95px,11vw,150px);padding-bottom:30px}
+.afii-careers .ac-hero-main{max-width:810px}
+.afii-careers .ac-hero-eyebrow{font-size:11px;letter-spacing:.19em;font-weight:800;display:flex;align-items:center;gap:13px;color:#f1d3a8;margin-bottom:35px}
+.afii-careers .ac-hero-line{display:inline-block;width:30px;height:1px;background:#d6b789}
+.afii-careers .ac-hero-small{color:#e6eaf0b0}
+.afii-careers .ac-hero h1{font-size:clamp(47px,6.9vw,100px);line-height:1.035;font-weight:500;margin:0 0 27px;color:white}
+.afii-careers .ac-hero-main>p{font-size:clamp(15px,1.42vw,18px);line-height:1.8;max-width:610px;color:#e2e7eb;margin:0 0 31px}
+.afii-careers .ac-hero-ctas{display:flex;flex-wrap:wrap;gap:13px}
+.afii-careers .ac-hero-bottom{display:flex;gap:30px;justify-content:space-between;align-items:center;border-top:1px solid #ffffff52;padding-top:20px;margin-top:65px;font-size:10px;letter-spacing:.14em;font-weight:600;color:#d1d9e0}
+.afii-careers .ac-hero-bottom a{color:#ebd1ab;text-decoration:none}
+/* Intro */
+.afii-careers .ac-introduction{padding:110px 0 125px}
+.afii-careers .ac-intro-top{display:flex;justify-content:space-between;border-bottom:1px solid #dae1e6;padding-bottom:15px;margin-bottom:48px}
+.afii-careers .ac-intro-top .ac-eyebrow{margin:0}
+.afii-careers .ac-intro-index{color:#7e8a93;font-size:11px;letter-spacing:.1em}
+.afii-careers .ac-intro-grid{display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:8vw}
+.afii-careers .ac-intro-grid h2{font-size:clamp(40px,5.2vw,72px);font-weight:540;line-height:1.11;margin:0}
+.afii-careers .ac-intro-grid p{font-size:16px;color:#526174;line-height:1.9;margin:0 0 16px}
+.afii-careers .ac-intro-grid .ac-text-link{margin-top:16px}
+/* Career fields */
+.afii-careers .ac-discover{padding:110px 0 115px;background:#f4f6f7}
+.afii-careers .ac-area-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}
+.afii-careers .ac-area-card{position:relative;min-height:420px;overflow:hidden;background:#14263a;color:white;text-decoration:none}
+.afii-careers .ac-area-photo,.afii-careers .ac-area-dark{position:absolute;inset:0}
+.afii-careers .ac-area-photo img{object-fit:cover;transition:transform .5s ease}
+.afii-careers .ac-area-card:hover img{transform:scale(1.065)}
+.afii-careers .ac-area-dark{background:linear-gradient(180deg,#0c1b2f99 0%,#0b20353b 40%,#061625ef 100%)}
+.afii-careers .ac-area-content{position:relative;display:flex;flex-direction:column;justify-content:space-between;min-height:420px;padding:30px}
+.afii-careers .ac-area-content>span{font-size:10px;letter-spacing:.14em;color:#edd2a4}
+.afii-careers .ac-area-content h3{font-size:clamp(25px,2.25vw,36px);font-weight:570;line-height:1.13;margin:0 0 13px;color:white}
+.afii-careers .ac-area-content p{font-size:14px;line-height:1.62;color:#dbe3e9;margin:0 0 22px}
+.afii-careers .ac-area-action{font-size:12px;font-weight:700;display:flex;gap:14px;align-items:center;color:#efd2a2}
+/* Discovery CTA */
+.afii-careers .ac-search-promo{background:#10263e;color:white;padding:103px 0 108px}
+.afii-careers .ac-search-promo-grid{display:grid;grid-template-columns:1fr .95fr;gap:9%;align-items:center}
+.afii-careers .ac-search-promo h2{font-size:clamp(40px,4.9vw,70px);font-weight:520;line-height:1.08;color:white;margin:0 0 22px}
+.afii-careers .ac-search-promo-grid>div:first-child>p:not(.ac-eyebrow){color:#bccbd6;font-size:16px;line-height:1.8;max-width:510px;margin-bottom:30px}
+.afii-careers .ac-search-promo-panel{padding:40px;border:1px solid #ffffff40;background:#ffffff0a}
+.afii-careers .ac-panel-heading{font-size:11px;letter-spacing:.15em;color:#dcb989;margin:0 0 25px}
+.afii-careers .ac-country-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 24px}
+.afii-careers .ac-country-grid a{display:flex;justify-content:space-between;gap:8px;align-items:center;color:#eff3f7;text-decoration:none;padding:17px 0;border-bottom:1px solid #ffffff32;font-size:14px}
+.afii-careers .ac-country-grid a:hover{color:#efce9b}
+.afii-careers .ac-country-grid .ac-arrow{color:#d4af7c}
+.afii-careers .ac-search-promo-note{font-size:11px;line-height:1.6;color:#b5c1cd;margin:26px 0 0}
+/* Sample jobs */
+.afii-careers .ac-openings-preview{padding:113px 0}
+.afii-careers .ac-demo-notice{display:flex;align-items:center;gap:7px;flex-wrap:wrap;padding:16px 19px;border:1px solid #ddcfb6;background:#faf5ec;color:#70552b;font-size:12px;line-height:1.55;margin:12px 0 29px}
+.afii-careers .ac-demo-notice strong{font-weight:800}
+.afii-careers .ac-demo-pip{width:7px;height:7px;background:#b9925c;border-radius:50%;flex:0 0 auto;margin-right:5px}
+.afii-careers .ac-featured-list{border-top:1px solid #cdd6de}
+.afii-careers .ac-featured-job{display:grid;grid-template-columns:1.4fr .7fr 35px;gap:24px;align-items:center;text-decoration:none;color:var(--ac-ink);padding:27px 13px;border-bottom:1px solid #d7dfe4;transition:background .2s}
+.afii-careers .ac-featured-job:hover{background:#f6f7f8}
+.afii-careers .ac-featured-job>div:first-child>span{font-size:10px;letter-spacing:.14em;font-weight:700;color:#9e7b4b}
+.afii-careers .ac-featured-job h3{font-size:clamp(20px,2.3vw,30px);font-weight:560;margin:8px 0}
+.afii-careers .ac-featured-job p{color:#667484;font-size:13px;margin:0}
+.afii-careers .ac-featured-location{display:flex;flex-direction:column;gap:7px;color:#536376;font-size:13px}
+.afii-careers .ac-featured-location span:last-child{font-size:12px;color:#88949e}
+.afii-careers .ac-featured-arrow{display:grid;place-items:center;width:33px;height:33px;border:1px solid #c4cdd5}
+.afii-careers .ac-center-cta{text-align:center;padding-top:34px}
+/* Life at AFII */
+.afii-careers .ac-people-story{display:grid;grid-template-columns:1fr 1fr;background:#eeeef0;min-height:550px}
+.afii-careers .ac-story-photo{position:relative;min-height:460px}
+.afii-careers .ac-story-photo img{object-fit:cover}
+.afii-careers .ac-story-text{padding:clamp(55px,8vw,116px) clamp(36px,7vw,100px);display:flex;flex-direction:column;justify-content:center}
+.afii-careers .ac-story-text h2{font-size:clamp(35px,4vw,60px);line-height:1.09;font-weight:540;margin:0 0 24px}
+.afii-careers .ac-story-text>p:not(.ac-eyebrow){line-height:1.85;font-size:15px;color:#5b6978;margin:0 0 27px}
+.afii-careers .ac-story-points{display:flex;flex-direction:column}
+.afii-careers .ac-story-points span{display:flex;gap:20px;border-bottom:1px solid #cbd3da;padding:13px 0;font-size:11px;color:#98764b}
+.afii-careers .ac-story-points b{color:#263e54;font-weight:620;font-size:13px}
+/* Process */
+.afii-careers .ac-process{padding:115px 0}
+.afii-careers .ac-process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.afii-careers .ac-process-card{border-top:1px solid #bfa379;padding:22px 10px 12px 0}
+.afii-careers .ac-process-card>span{font-size:12px;color:#a78453}
+.afii-careers .ac-process-card h3{font-size:22px;line-height:1.2;margin:25px 0 13px;font-weight:650}
+.afii-careers .ac-process-card p{font-size:14px;line-height:1.75;color:#647484;margin:0}
+.afii-careers .ac-process-note{border-top:1px solid #e4e8ed;padding-top:18px;color:#89939d;font-size:12px;margin-top:41px}
+.afii-careers .ac-final-cta{padding:100px 0;background:#0e243a;text-align:center;color:white}
+.afii-careers .ac-final-cta h2{font-size:clamp(44px,5.8vw,82px);line-height:1.04;font-weight:500;margin:0 0 31px;color:white}
+.afii-careers .ac-final-small{font-size:11px;color:#a8b8c6;margin:30px auto 0;max-width:450px;line-height:1.6}
+/* Opportunity directory */
+.afii-careers .ac-page-title,.afii-careers .ac-job-hero,.afii-careers .ac-apply-top{background:#11283f;color:#fff;padding:38px 0 78px}
+.afii-careers .ac-breadcrumb{display:flex;align-items:center;flex-wrap:wrap;gap:12px;color:#a8b7c4;font-size:12px;margin-bottom:70px}
+.afii-careers .ac-breadcrumb a{color:#f3e7d4;text-decoration:none}
+.afii-careers .ac-breadcrumb span:last-child{color:#d9dfe5}
+.afii-careers .ac-page-title-grid{display:grid;grid-template-columns:1.4fr .6fr;gap:55px;align-items:end}
+.afii-careers .ac-page-title h1,.afii-careers .ac-apply-top h1{font-size:clamp(42px,5vw,72px);font-weight:500;line-height:1.08;color:#fff;margin:0}
+.afii-careers .ac-page-title-grid>p{color:#c3d0dc;line-height:1.8;font-size:15px;margin:0 0 7px}
+.afii-careers .ac-directory-section{background:#f6f8f8;padding:54px 0 100px}
+.afii-careers .ac-explorer .ac-demo-notice{margin:0 0 20px}
+.afii-careers .ac-searchbar{display:flex;align-items:center;gap:22px;padding:22px 26px;background:#fff;border:1px solid #dce3e8;margin-bottom:20px}
+.afii-careers .ac-searchfield{display:flex;align-items:center;gap:16px;flex:1}
+.afii-careers .ac-searchfield>span{font-size:30px;color:#997851}
+.afii-careers .ac-searchfield input{border:none;outline-offset:6px;width:100%;font-size:16px;padding:10px 5px;color:#1b2c3d;background:transparent;min-width:0}
+.afii-careers .ac-search-count{font-size:12px;color:#82909b;white-space:nowrap}
+.afii-careers .ac-search-layout{display:grid;grid-template-columns:280px minmax(0,1fr);gap:28px;align-items:start}
+.afii-careers .ac-filter-panel{padding:27px 24px;background:#fff;border:1px solid #dde3e7}
+.afii-careers .ac-filter-top{display:flex;justify-content:space-between;align-items:center;gap:8px;margin-bottom:25px}
+.afii-careers .ac-filter-top h2{font-size:17px;margin:0;font-weight:720}
+.afii-careers .ac-filter-top button{border:none;background:none;color:#886b45;text-decoration:underline;cursor:pointer;font-size:11px}
+.afii-careers .ac-filter-control{display:flex;flex-direction:column;gap:8px;margin-bottom:20px;font-size:12px;font-weight:700;color:#435568}
+.afii-careers .ac-filter-control select,.afii-careers .ac-sort select{min-height:44px;border:1px solid #dce3e6;background:#fff;padding:9px 10px;font-size:12px;color:#24384b;max-width:100%;width:100%}
+.afii-careers .ac-career-stage{border:0;border-top:1px solid #e0e5e9;margin:13px 0 0;padding:23px 0 0}
+.afii-careers .ac-career-stage legend{font-size:12px;font-weight:750;color:#314457;padding:0;margin-top:12px}
+.afii-careers .ac-career-stage label{display:flex;gap:10px;align-items:center;font-size:12px;color:#5e6d7d;margin:0 0 14px;cursor:pointer}
+.afii-careers .ac-career-stage input{accent-color:#b18b58}
+.afii-careers .ac-results-pane{min-width:0}
+.afii-careers .ac-results-bar{display:flex;align-items:end;justify-content:space-between;gap:14px;margin:11px 0 25px}
+.afii-careers .ac-results-bar .ac-eyebrow{margin:0 0 8px}
+.afii-careers .ac-results-bar h2{margin:0;font-size:28px;font-weight:630}
+.afii-careers .ac-sort{display:flex;align-items:center;gap:12px;color:#5c6e7c;white-space:nowrap;font-size:12px}
+.afii-careers .ac-sort select{width:155px}
+.afii-careers .ac-active-filters{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:16px}
+.afii-careers .ac-active-filters button{font-size:11px;border:1px solid #e1d3ba;background:#faf4e8;color:#775a35;padding:8px 10px;cursor:pointer}
+.afii-careers .ac-active-filters button span{margin-left:5px;font-size:15px}
+.afii-careers .ac-job-list{display:flex;flex-direction:column;gap:12px}
+.afii-careers .ac-job-row{background:#fff;border:1px solid #dce4e8;display:flex;align-items:center;justify-content:space-between;gap:25px;padding:30px 29px;transition:border .2s,box-shadow .2s}
+.afii-careers .ac-job-row:hover{border-color:#c4a87c;box-shadow:0 7px 26px #081c2e0c}
+.afii-careers .ac-job-main{min-width:0}
+.afii-careers .ac-job-meta{display:flex;align-items:center;gap:10px;flex-wrap:wrap;font-size:10px;color:#9f7a4b;letter-spacing:.09em;font-weight:800}
+.afii-careers .ac-job-row h3{font-size:clamp(20px,2vw,26px);font-weight:650;margin:12px 0 10px}
+.afii-careers .ac-job-row h3 a{display:inline-flex;align-items:center;gap:12px;color:#1b3046;text-decoration:none}
+.afii-careers .ac-job-row h3 a:hover{color:#8e704b}
+.afii-careers .ac-job-desc{color:#617284;font-size:14px;line-height:1.65;margin:0 0 10px}
+.afii-careers .ac-job-entity{color:#435669;font-size:12px;font-weight:680;margin:0 0 16px}
+.afii-careers .ac-job-tags{display:flex;flex-wrap:wrap;gap:7px}
+.afii-careers .ac-tag{background:#f2f5f6;color:#536577;border:1px solid #e1e6e9;font-size:11px;line-height:1.4;padding:6px 9px}
+.afii-careers .ac-job-button{color:#182e42;border:1px solid #ccd5dc;padding:12px 15px;display:inline-flex;align-items:center;gap:17px;font-size:12px;font-weight:750;text-decoration:none;white-space:nowrap}
+.afii-careers .ac-job-button:hover{background:#122941;color:white}
+.afii-careers .ac-zero{background:white;text-align:center;padding:70px 28px}
+.afii-careers .ac-zero-mark{font-size:75px;color:#c2ae8e}
+.afii-careers .ac-zero h3{font-size:28px;margin:8px 0}
+.afii-careers .ac-zero p{font-size:14px;color:#667684}
+.afii-careers .ac-zero button{background:#152a40;color:white;padding:14px 20px;border:0;margin-top:14px;cursor:pointer;display:inline-flex;gap:14px;align-items:center}
+.afii-careers .ac-search-bottom{display:flex;justify-content:space-between;gap:25px;margin-top:23px;align-items:center}
+.afii-careers .ac-search-bottom p{max-width:515px;color:#84909b;font-size:12px;line-height:1.7}
+.afii-careers .ac-search-bottom a{white-space:nowrap;font-size:12px;color:#755a37;text-decoration:none;display:flex;gap:11px;align-items:center}
+.afii-careers .ac-filter-mobile-button{display:none}
+.afii-careers .ac-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* Job detail */
+.afii-careers .ac-job-hero{padding-bottom:65px}
+.afii-careers .ac-job-hero h1{font-size:clamp(42px,5vw,78px);color:white;font-weight:510;margin:6px 0 23px}
+.afii-careers .ac-job-hero-tags{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.afii-careers .ac-job-hero-tags span{border:1px solid #ffffff43;padding:8px 11px;color:#dce5ed;font-size:12px}
+.afii-careers .ac-job-hero p{font-size:17px;line-height:1.75;color:#c9d4de;max-width:660px;margin:0}
+.afii-careers .ac-job-detail{background:#f7f8f8;padding:50px 0 90px}
+.afii-careers .ac-job-detail-grid{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:43px;align-items:start}
+.afii-careers .ac-job-description{background:white;padding:38px 45px;border:1px solid #e2e7ea}
+.afii-careers .ac-detail-section{padding:19px 0 35px;border-bottom:1px solid #e2e8eb;margin-bottom:20px}
+.afii-careers .ac-detail-section:last-of-type{border-bottom:0}
+.afii-careers .ac-detail-section .ac-eyebrow{margin-bottom:12px}
+.afii-careers .ac-detail-section h2{font-weight:650;font-size:28px;margin:0 0 17px}
+.afii-careers .ac-detail-section p,.afii-careers .ac-detail-section li{color:#536778;font-size:15px;line-height:1.85}
+.afii-careers .ac-detail-section ul{margin:0;padding-left:22px}
+.afii-careers .ac-detail-section li{padding-left:5px;margin-bottom:9px}
+.afii-careers .ac-equal-note{padding:21px;background:#f1f3f5;border-left:3px solid #bba278}
+.afii-careers .ac-equal-note strong{font-size:14px}
+.afii-careers .ac-equal-note p{color:#61717f;line-height:1.7;font-size:12px;margin:7px 0 0}
+.afii-careers .ac-detail-card{background:#fff;border:1px solid #dce3e6;padding:28px}
+.afii-careers .ac-detail-card .ac-eyebrow{margin-bottom:10px}
+.afii-careers .ac-detail-card h3{font-size:26px;margin:0 0 24px}
+.afii-careers .ac-detail-card dl,.afii-careers .ac-apply-job-card dl{display:grid;grid-template-columns:1fr 1.1fr;gap:16px 12px;margin:0 0 30px}
+.afii-careers .ac-detail-card dt,.afii-careers .ac-apply-job-card dt{font-size:12px;color:#84919c}
+.afii-careers .ac-detail-card dd,.afii-careers .ac-apply-job-card dd{margin:0;font-size:12px;color:#263c52;font-weight:690;line-height:1.5;overflow-wrap:anywhere}
+.afii-careers .ac-detail-small{color:#8995a0;font-size:11px;line-height:1.6;margin:13px 0 0}
+.afii-careers .ac-sidebar-back{margin-top:23px}
+.afii-careers .ac-sidebar-back a{color:#85653b;font-size:13px;text-decoration:none}
+/* Application preview */
+.afii-careers .ac-apply-top{padding-bottom:64px}
+.afii-careers .ac-apply-top h1{margin-bottom:14px}
+.afii-careers .ac-apply-top>div>p:last-child{color:#c4d1dd;max-width:750px;line-height:1.7;font-size:15px}
+.afii-careers .ac-apply-section{background:#f6f8f8;padding:55px 0 100px}
+.afii-careers .ac-apply-grid{display:grid;grid-template-columns:minmax(0,1fr) 325px;gap:30px;align-items:start}
+.afii-careers .ac-apply-warning{padding:19px 22px;border:1px solid #d5b98b;background:#fff8e9;margin-bottom:25px}
+.afii-careers .ac-apply-warning strong{font-size:14px;color:#77562c}
+.afii-careers .ac-apply-warning p{font-size:12px;color:#846a4c;line-height:1.6;margin:7px 0 0}
+.afii-careers .ac-application-form,.afii-careers .ac-review-panel{background:#fff;border:1px solid #dde3e7;padding:38px 40px}
+.afii-careers .ac-form-head{margin-bottom:28px}
+.afii-careers .ac-form-head .ac-eyebrow{margin:0 0 9px}
+.afii-careers .ac-form-head h2,.afii-careers .ac-review-panel h2{font-size:32px;font-weight:600;margin:0 0 9px}
+.afii-careers .ac-form-head p{font-size:12px;color:#80909c;margin:0}
+.afii-careers .ac-form-two{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.afii-careers .ac-application-form label:not(.ac-form-check){display:flex;flex-direction:column;gap:9px;font-size:12px;font-weight:700;color:#354a5d;margin-bottom:22px}
+.afii-careers .ac-application-form input:not([type=checkbox]),.afii-careers .ac-application-form select,.afii-careers .ac-application-form textarea{font:inherit;font-size:14px;min-height:46px;width:100%;border:1px solid #d6dfe4;padding:12px 13px;color:#1b3044;background:white;border-radius:0}
+.afii-careers .ac-application-form textarea{resize:vertical}
+.afii-careers .ac-application-form input:focus-visible,.afii-careers .ac-application-form select:focus-visible,.afii-careers .ac-application-form textarea:focus-visible{outline:2px solid #b59562;outline-offset:1px}
+.afii-careers .ac-form-break{border-top:1px solid #e1e6e9;padding-top:34px;margin-top:15px}
+.afii-careers .ac-help{font-size:11px;color:#8997a3;font-weight:400;line-height:1.55}
+.afii-careers .ac-form-check{display:flex;align-items:start;gap:12px;font-size:12px;line-height:1.75;color:#536679;margin:7px 0 23px;cursor:pointer}
+.afii-careers .ac-form-check input{margin-top:5px;accent-color:#b89766}
+.afii-careers .ac-submit-hint{text-align:center;margin:14px 0 0}
+.afii-careers .ac-apply-job-card{background:white;border:1px solid #dce3e8;padding:27px}
+.afii-careers .ac-apply-job-card .ac-eyebrow{margin:0 0 11px}
+.afii-careers .ac-apply-job-card h3{font-size:24px;font-weight:650;margin:0 0 10px}
+.afii-careers .ac-apply-job-card>p{font-size:13px;color:#637587;margin:0 0 27px}
+.afii-careers .ac-apply-job-card a{color:#846339;font-size:12px;text-decoration:none}
+.afii-careers .ac-apply-security{margin-top:18px;padding:25px;background:#e9eef1}
+.afii-careers .ac-apply-security strong{font-size:14px}
+.afii-careers .ac-apply-security p{color:#667584;font-size:12px;line-height:1.7;margin:10px 0 0}
+.afii-careers .ac-review-panel>p{font-size:15px;line-height:1.75;color:#5c6d7c}
+.afii-careers .ac-review-summary{padding:21px;border:1px solid #e0e6e9;margin:25px 0}
+.afii-careers .ac-review-summary span{display:flex;justify-content:space-between;gap:10px;font-size:12px;border-bottom:1px solid #ebeff1;padding:10px 0;color:#7b8791}
+.afii-careers .ac-review-summary span:last-child{border:0}
+.afii-careers .ac-review-summary b{color:#273f55;text-align:right}
+.afii-careers .ac-review-actions{display:flex;flex-wrap:wrap;gap:12px}
+/* Responsive */
+@media(max-width:1050px){.afii-careers .ac-hero{min-height:650px}.afii-careers .ac-area-grid{gap:10px}.afii-careers .ac-area-content{padding:22px}.afii-careers .ac-search-layout{grid-template-columns:250px minmax(0,1fr);gap:20px}.afii-careers .ac-job-row{padding:23px 20px}.afii-careers .ac-job-detail-grid{grid-template-columns:minmax(0,1fr) 295px;gap:20px}.afii-careers .ac-apply-grid{grid-template-columns:minmax(0,1fr) 290px;gap:20px}}
+@media(max-width:850px){.afii-careers .ac-hero{min-height:690px}.afii-careers .ac-intro-grid{grid-template-columns:1fr;gap:26px}.afii-careers .ac-introduction,.afii-careers .ac-discover,.afii-careers .ac-openings-preview,.afii-careers .ac-process{padding:78px 0}.afii-careers .ac-search-promo-grid,.afii-careers .ac-page-title-grid{grid-template-columns:1fr;gap:35px}.afii-careers .ac-page-title-grid>p{max-width:600px}.afii-careers .ac-section-heading{align-items:start}.afii-careers .ac-area-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.afii-careers .ac-area-card:last-child{grid-column:span 2;min-height:280px}.afii-careers .ac-area-card:last-child .ac-area-content{min-height:280px}.afii-careers .ac-people-story{grid-template-columns:1fr}.afii-careers .ac-story-photo{min-height:380px}.afii-careers .ac-process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.afii-careers .ac-search-layout{grid-template-columns:1fr}.afii-careers .ac-filter-panel{display:none}.afii-careers .ac-filter-panel.is-open{display:block}.afii-careers .ac-filter-mobile-button{display:inline-block;border:1px solid #bac7d0;background:white;color:#334a5d;padding:12px 14px;font-size:12px;cursor:pointer}.afii-careers .ac-job-detail-grid,.afii-careers .ac-apply-grid{grid-template-columns:1fr}.afii-careers .ac-detail-sidebar,.afii-careers .ac-apply-side{max-width:none}.afii-careers .ac-detail-card dl,.afii-careers .ac-apply-job-card dl{grid-template-columns:1fr 2fr}}
+@media(max-width:620px){.afii-careers .ac-hero{min-height:680px;min-height:760px}.afii-careers .ac-hero-inside{padding-top:95px}.afii-careers .ac-hero h1{font-size:clamp(44px,11vw,68px)}.afii-careers .ac-hero-small,.afii-careers .ac-hero-bottom span:nth-child(2){display:none}.afii-careers .ac-hero-bottom{margin-top:45px;gap:8px;flex-wrap:wrap;font-size:9px}.afii-careers .ac-hero-ctas{flex-direction:column;align-items:stretch}.afii-careers .ac-hero-ctas .ac-button{width:100%}.afii-careers .ac-intro-top{gap:12px}.afii-careers .ac-intro-index{display:none}.afii-careers .ac-section-heading{display:block}.afii-careers .ac-section-heading>p,.afii-careers .ac-section-heading>.ac-text-link{margin-top:20px}.afii-careers .ac-area-grid{grid-template-columns:1fr}.afii-careers .ac-area-card,.afii-careers .ac-area-card:last-child{grid-column:auto;min-height:350px}.afii-careers .ac-area-content,.afii-careers .ac-area-card:last-child .ac-area-content{min-height:350px}.afii-careers .ac-search-promo{padding:74px 0}.afii-careers .ac-search-promo-panel{padding:25px 20px}.afii-careers .ac-country-grid{grid-template-columns:1fr}.afii-careers .ac-featured-job{grid-template-columns:1fr 35px;gap:12px;padding:21px 5px}.afii-careers .ac-featured-job .ac-featured-location{grid-column:1;grid-row:2;flex-direction:row;flex-wrap:wrap}.afii-careers .ac-featured-arrow{grid-column:2;grid-row:1/3}.afii-careers .ac-story-text{padding:67px 24px}.afii-careers .ac-process-grid{grid-template-columns:1fr}.afii-careers .ac-page-title,.afii-careers .ac-job-hero,.afii-careers .ac-apply-top{padding:32px 0 54px}.afii-careers .ac-breadcrumb{margin-bottom:48px}.afii-careers .ac-searchbar{padding:15px;gap:9px;flex-wrap:wrap}.afii-careers .ac-search-count{width:100%;text-align:right}.afii-careers .ac-searchfield input{font-size:13px}.afii-careers .ac-directory-section,.afii-careers .ac-job-detail,.afii-careers .ac-apply-section{padding:30px 0 70px}.afii-careers .ac-results-bar{align-items:start;flex-direction:column}.afii-careers .ac-job-row{display:block}.afii-careers .ac-job-button{margin-top:19px}.afii-careers .ac-search-bottom{display:block}.afii-careers .ac-search-bottom a{margin-top:10px}.afii-careers .ac-job-description{padding:24px 20px}.afii-careers .ac-detail-card{padding:22px}.afii-careers .ac-application-form,.afii-careers .ac-review-panel{padding:28px 20px}.afii-careers .ac-form-two{grid-template-columns:1fr;gap:0}}
+@media(prefers-reduced-motion:reduce){.afii-careers .ac-hero-video{display:none}.afii-careers .ac-area-photo img,.afii-careers .ac-button{transition:none}}
+
+/* AFII CAREERS ACCESSIBILITY & FUNCTIONAL FIX — v1.1 (scoped, safe to append) */
+/* Match the site's existing centered content grid; avoid flex:1 overriding .container width. */
+.afii-careers .ac-hero-inside.container{
+  flex:0 1 auto;
+  width:min(1320px,calc(100% - 80px));
+  max-width:1320px;
+  margin-inline:auto;
+  min-height:inherit;
+  padding-top:clamp(44px,5vw,76px);
+  padding-bottom:26px;
+  justify-content:center;
+  gap:28px;
+}
+.afii-careers .ac-hero{min-height:670px;height:auto}
+.afii-careers .ac-hero-main{max-width:880px}
+.afii-careers .ac-hero h1{font-size:clamp(45px,5.5vw,83px);line-height:1.08;margin-bottom:18px}
+.afii-careers .ac-hero-eyebrow{margin-bottom:22px}
+.afii-careers .ac-hero-main>p{font-size:17px;line-height:1.68;margin-bottom:23px}
+.afii-careers .ac-hero-bottom{margin-top:0}
+/* Readable body copy and interactive controls — main editorial headings unchanged. */
+.afii-careers .ac-eyebrow{font-size:12px}
+.afii-careers .ac-hero-eyebrow{font-size:13px}
+.afii-careers .ac-button{font-size:14px;line-height:1.5;letter-spacing:.035em;text-transform:none;min-height:52px}
+.afii-careers a.ac-button-dark,.afii-careers button.ac-button-dark,
+.afii-careers a.ac-apply-entry{
+  background-color:#142942 !important;
+  border:2px solid #142942 !important;
+  color:#fff !important;
+  opacity:1 !important;
+  visibility:visible !important;
+  text-shadow:none !important;
+  cursor:pointer !important;
+  text-decoration:none !important;
+}
+.afii-careers a.ac-button-dark:hover,.afii-careers button.ac-button-dark:hover,
+.afii-careers a.ac-apply-entry:hover{background-color:#264565 !important;border-color:#264565 !important;color:#fff !important}
+.afii-careers a.ac-button-dark .ac-arrow,.afii-careers a.ac-apply-entry .ac-arrow{color:#fff !important}
+.afii-careers a.ac-apply-entry{display:flex !important;justify-content:space-between;align-items:center;gap:12px;pointer-events:auto !important;min-height:58px;font-weight:750;padding:14px 16px}
+.afii-careers a.ac-apply-entry:focus-visible{outline:3px solid #c5a26a;outline-offset:3px}
+.afii-careers .ac-text-link{font-size:15px}
+.afii-careers .ac-area-content>span,.afii-careers .ac-area-action{font-size:13px}
+.afii-careers .ac-area-content p,.afii-careers .ac-country-grid a{font-size:16px}
+.afii-careers .ac-search-promo-note,.afii-careers .ac-demo-notice{font-size:14px;line-height:1.65}
+.afii-careers .ac-featured-job>div:first-child>span,.afii-careers .ac-job-meta{font-size:12px}
+.afii-careers .ac-featured-job p,.afii-careers .ac-featured-location,
+.afii-careers .ac-featured-location span:last-child{font-size:15px}
+.afii-careers .ac-story-text>p:not(.ac-eyebrow),.afii-careers .ac-intro-grid p{font-size:17px}
+.afii-careers .ac-story-points span{font-size:13px}
+.afii-careers .ac-story-points b{font-size:16px}
+.afii-careers .ac-page-title-grid>p,.afii-careers .ac-process-card p{font-size:16px}
+.afii-careers .ac-breadcrumb,.afii-careers .ac-job-hero-tags span{font-size:14px}
+.afii-careers .ac-filter-top button,.afii-careers .ac-filter-control,
+.afii-careers .ac-career-stage legend,.afii-careers .ac-career-stage label{font-size:15px}
+.afii-careers .ac-filter-control select,.afii-careers .ac-sort select{font-size:15px;min-height:48px}
+.afii-careers .ac-filter-control small{font-size:13px;color:#596d7e;line-height:1.5;font-weight:450}
+.afii-careers .ac-filter-panel{padding:27px 23px}
+.afii-careers .ac-search-count,.afii-careers .ac-sort,.afii-careers .ac-job-entity,
+.afii-careers .ac-job-button,.afii-careers .ac-search-bottom p,
+.afii-careers .ac-search-bottom a,.afii-careers .ac-active-filters button{font-size:14px}
+.afii-careers .ac-job-desc{font-size:16px;line-height:1.72}
+.afii-careers .ac-tag{font-size:13px;padding:7px 10px}
+.afii-careers .ac-detail-section p,.afii-careers .ac-detail-section li{font-size:16px;line-height:1.83}
+.afii-careers .ac-detail-card dt,.afii-careers .ac-apply-job-card dt{font-size:14px;color:#576879}
+.afii-careers .ac-detail-card dd,.afii-careers .ac-apply-job-card dd{font-size:14px;color:#1b3449}
+.afii-careers .ac-detail-small,.afii-careers .ac-equal-note p,
+.afii-careers .ac-sidebar-back a{font-size:14px;line-height:1.7}
+.afii-careers .ac-apply-warning p,.afii-careers .ac-form-head p,
+.afii-careers .ac-help,.afii-careers .ac-form-check,
+.afii-careers .ac-apply-job-card a,.afii-careers .ac-apply-security p,
+.afii-careers .ac-review-summary span{font-size:14px}
+.afii-careers .ac-application-form label:not(.ac-form-check){font-size:15px}
+.afii-careers .ac-application-form input:not([type=checkbox]),
+.afii-careers .ac-application-form select,.afii-careers .ac-application-form textarea{font-size:16px}
+.afii-careers .ac-final-small,.afii-careers .ac-process-note{font-size:14px}
+@media(max-width:1180px){.afii-careers .ac-hero-inside.container{width:min(100% - 56px,1320px)}}
+@media(max-width:900px){.afii-careers .ac-hero-inside.container{width:calc(100% - 42px)}}
+@media(max-width:620px){
+  .afii-careers .ac-hero{min-height:720px}
+  .afii-careers .ac-hero-inside.container{width:calc(100% - 32px);padding-top:54px;padding-bottom:20px;gap:24px}
+  .afii-careers .ac-hero h1{font-size:clamp(40px,10vw,58px)}
+  .afii-careers .ac-hero-main>p{font-size:16px}
+  .afii-careers .ac-hero-bottom{font-size:11px}
+  .afii-careers .ac-searchfield input{font-size:16px}
+  .afii-careers .ac-filter-mobile-button{font-size:15px}
+  .afii-careers .ac-application-form label:not(.ac-form-check){font-size:15px}
+}
