@@ -8,7 +8,7 @@ const offices = [
     label: "Group Headquarters",
     title: "AFII Structured Finance GmbH",
     image: "/images/office-germany.jpg",
-    address: "Alfred-Herrhausen-Allee 3—“5, 65760 Eschborn, Germany",
+    address: "Alfred-Herrhausen-Allee 3-5, 65760 Eschborn, Germany",
     description: "Registered office of AFII Structured Finance GmbH. Amtsgericht Frankfurt am Main, HRB 140747.",
     extra: "Managing Directors: Dr. Mahesh Pal Singh Gandhi and Ms. Kirti Gulati.",
   },
@@ -17,7 +17,7 @@ const offices = [
     label: "Registered Office",
     title: "AFII Capital Partners Limited",
     image: "/images/uk-london.jpg",
-    address: "124—“128 City Road, London, England, EC1V 2NX",
+    address: "124-128 City Road, London EC1V 2NX, UK",
     description: "AFII Capital Partners Limited is headquartered in London, United Kingdom.",
   },
   
@@ -63,11 +63,11 @@ const offices = [
     ["Romania", "/images/office-romania.jpg"],
   ].map(([name, image]) => ({
     name,
-    label: "Partner network",
-    title: "Partner and mandate coverage",
+    label: name === "Switzerland" ? "Engineering & EPCM" : "Partner network",
+    title: name === "Switzerland" ? "AGENOVA | AFII subsidiary" : "Partner and mandate coverage",
     image,
     address: ({ Singapore: "68 Circular Rd, Singapore 049422", Switzerland: "Gotthardstrasse 14, 6300 Zug, Switzerland", Vietnam: "Vinhomes Central Park, Thanh My Tay, Ho Chi Minh, Vietnam" } as Record<string, string>)[name] || name,
-    description: `Partner and mandate coverage in ${name}, subject to local relationships and project requirements. Contact AFII for current regional coverage and introductions.`,
+    description: name === "Switzerland" ? "AGENOVA, an AFII subsidiary, provides engineering and EPCM services, coordinating multidisciplinary design, managing procurement packages and supervising construction on behalf of project owners." : `Partner and mandate coverage in ${name}, subject to local relationships and project requirements. Contact AFII for current regional coverage and introductions.`,
   })),
 ];
 

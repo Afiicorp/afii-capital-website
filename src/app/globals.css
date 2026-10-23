@@ -1889,3 +1889,11 @@ footer [class*="Expertise"] a:visited {
 .afii-featured-card img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:contain}
 .afii-featured-caption{font-size:12px!important;color:#67758a!important;margin-top:12px!important}
 @media(max-width:650px){.afii-featured-grid{grid-template-columns:1fr}.afii-featured-card:nth-child(2){display:none}.afii-featured-heading{align-items:center}.afii-featured-heading h3{font-size:23px}}
+
+/* AFII office preview: seamless continuous motion; overrides legacy scroll mode. */
+.office-preview-marquee{display:flex!important;overflow:hidden!important;scroll-snap-type:none!important;gap:0!important;}
+.office-preview-track{flex:0 0 auto!important;display:flex!important;width:max-content!important;animation:afiiOfficeInfinite 42s linear infinite!important;transform:translateZ(0);}
+.office-preview-track-clone{animation-delay:0s!important;}
+.office-preview-marquee:hover .office-preview-track{animation-play-state:paused!important;}
+@keyframes afiiOfficeInfinite{from{transform:translateX(0)}to{transform:translateX(-100%)}}
+@media(prefers-reduced-motion:reduce){.office-preview-track{animation:none!important}.office-preview-marquee{overflow-x:auto!important}}
